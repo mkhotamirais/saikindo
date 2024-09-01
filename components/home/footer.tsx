@@ -1,27 +1,17 @@
 import { Container } from "../wrapper";
-import { Logo } from "./header";
+import { Logo, Socials } from "./header";
 import { FaEnvelope, FaWhatsapp, FaGlobe } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="border-t">
+    <footer className="bg-gradient-to-b from-yellow-400 to-blue-400/50">
       <Container>
-        <div className="py-8 flex justify-between items-center">
-          <div>
-            <Logo />
-            <address>Komp. LPTI Jl. Paneli No.13A RT03/08 Kel Ciparigi Kecamatan Bogor Utara Email: </address>
-          </div>
-          <div className="flex gap-4">
-            <a title="Email" href="">
-              <FaEnvelope size={24} />
-            </a>
-            <a title="Email" href="">
-              <FaWhatsapp size={24} />
-            </a>
-            <a title="Email" href="">
-              <FaGlobe size={24} />
-            </a>
-          </div>
+        <div className="py-8 flex flex-col space-y-4 justify-between items-center text-center">
+          <Logo />
+          <address className="text-sm">
+            Komp. LPTI Jl. Paneli No.13A RT03/08 Kel Ciparigi Kecamatan Bogor Utara Email:{" "}
+          </address>
+          <Socials size={24} />
         </div>
       </Container>
     </footer>

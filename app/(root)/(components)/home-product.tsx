@@ -19,13 +19,13 @@ export function HomeProduct() {
           <Title title="Products" />
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
             {productList.map((item, i) => (
-              <div key={i}>
+              <div key={i} className="h-72 bg-white rounded shadow">
                 <Image
                   src={item.image}
                   width={500}
                   height={500}
                   alt="image product"
-                  className="object-center object-contain size-72"
+                  className="object-center object-contain h-full"
                 />
               </div>
             ))}

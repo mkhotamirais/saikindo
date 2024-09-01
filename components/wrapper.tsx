@@ -1,3 +1,6 @@
+"use client";
+
+import { useHome } from "@/hooks/use-home";
 import React from "react";
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
@@ -11,4 +14,12 @@ export const Title = ({ title, description }: { title: string; description?: str
       <p className="text-muted-foreground font-roboto">{description}</p>
     </div>
   );
+};
+
+export const ClientHomePage = ({ children }: { children: React.ReactNode }) => {
+  const { nav, closeNav } = useHome();
+  const onClick = () => {
+    if (nav) closeNav();
+  };
+  return <main onClick={onClick}>{children}</main>;
 };

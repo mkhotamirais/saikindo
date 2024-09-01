@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ClientHomePage } from "@/components/wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={`${inter.className} font-roboto`}>{children}</body>
+      <body className={`${inter.className} font-roboto`}>
+        <ClientHomePage>{children}</ClientHomePage>
+      </body>
     </html>
   );
 }
