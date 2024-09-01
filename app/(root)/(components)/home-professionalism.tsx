@@ -1,34 +1,22 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Container, Title } from "@/components/wrapper";
 
-const ServiceList = [
+const ProfessionalismList = [
   {
     title: "PROVIDING QUALITY UNIFORMS",
-    description: `We provide comfortable,
-durable, and high-quality
-uniforms for a variety of
-industry needs.`,
+    description: `We provide comfortable,durable, and high-qualityuniforms for a variety ofindustry needs.`,
   },
   {
     title: "INNOVATIVE DESIGNS",
-    description: `We offer modern and
-functional designs that
-are in line with the latest
-trends and specific
-customer needs.`,
+    description: `We offer modern andfunctional designs thatare in line with the latesttrends and specificcustomer needs.`,
   },
   {
     title: "SUSTAINABILITY AND ETHICS",
-    description: `We practice environmentally
-friendly and socially
-responsible manufacturing.`,
+    description: `We practice environmentallyfriendly and sociallyresponsible manufacturing.`,
   },
   {
     title: "CUSTOMER SATISFACTION",
-    description: `We focus on customer
-satisfaction by providing
-products that meet their
-expectations and needs.`,
+    description: `We focus on customersatisfaction by providingproducts that meet theirexpectations and needs.`,
   },
 ];
 
@@ -37,12 +25,12 @@ const description = `We are committed to being a trusted partner in providing un
 
 export function HomeProfessionalism() {
   return (
-    <section className="bg-gray-200">
+    <section className="bg-gray-100">
       <Container>
-        <div className="py-12">
+        <div className="py-16">
           <Title title={title} description={description} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
-            {ServiceList.map((item, i) => (
+            {ProfessionalismList.map((item, i) => (
               <Card key={i} className="shadow border-none">
                 <CardHeader className="font-poppins font-bold text-lg">{item.title}</CardHeader>
                 <CardContent className="font-roboto text-muted-foreground">{item.description}</CardContent>

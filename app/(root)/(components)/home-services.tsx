@@ -1,34 +1,52 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Container, Title } from "@/components/wrapper";
+import {
+  FaBriefcase,
+  FaBuilding,
+  FaHotel,
+  FaIndustry,
+  FaMusic,
+  FaSchool,
+  FaServicestack,
+  FaUtensils,
+} from "react-icons/fa6";
 
-const ServiceList = [
+const serviceList = [
   {
-    title: "PROVIDING QUALITY UNIFORMS",
-    description: `We provide comfortable,
-durable, and high-quality
-uniforms for a variety of
-industry needs.`,
+    icon: FaSchool,
+    label: "SCHOOLS AND NURSERIES",
   },
   {
-    title: "INNOVATIVE DESIGNS",
-    description: `We offer modern and
-functional designs that
-are in line with the latest
-trends and specific
-customer needs.`,
+    icon: FaUtensils,
+    label: "RESTAURANTS AND CAFES",
   },
   {
-    title: "SUSTAINABILITY AND ETHICS",
-    description: `We practice environmentally
-friendly and socially
-responsible manufacturing.`,
+    icon: FaHotel,
+    label: "HOTELS AND RESORT",
   },
   {
-    title: "CUSTOMER SATISFACTION",
-    description: `We focus on customer
-satisfaction by providing
-products that meet their
-expectations and needs.`,
+    icon: FaMusic,
+    label: "CLUBS",
+  },
+  {
+    icon: FaIndustry,
+    label: "MANUFACTURING FACILITIES",
+  },
+  {
+    icon: FaBuilding,
+    label: "ORGANIZATIONS",
+  },
+  {
+    icon: FaServicestack,
+    label: "SERVICES PROVIDER’S",
+  },
+  {
+    icon: FaBriefcase,
+    label: "CORPORATE",
+  },
+  {
+    icon: FaBuilding,
+    label: "OFFICE",
   },
 ];
 
@@ -39,14 +57,14 @@ export function HomeServices() {
   return (
     <section>
       <Container>
-        <div className="py-12">
+        <div className="py-16">
           <Title title={title} description={description} />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
-            {ServiceList.map((item, i) => (
-              <Card key={i} className="shadow border-none">
-                <CardHeader className="font-poppins font-bold text-lg">{item.title}</CardHeader>
-                <CardContent className="font-roboto text-muted-foreground">{item.description}</CardContent>
-              </Card>
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
+            {serviceList.map((item, i) => (
+              <div key={i} className="inline-flex justify-center flex-col items-center gap-4">
+                <item.icon size={32} />
+                <h3 className="text-sm font-medium font-roboto text-center">{item.label}</h3>
+              </div>
             ))}
           </div>
         </div>

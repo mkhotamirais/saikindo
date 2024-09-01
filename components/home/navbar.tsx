@@ -50,7 +50,7 @@ export function Navbar() {
             {item.title}
           </Link>
         ))}
-        <Socials size={18} className="flex sm:hidden pt-3 justify-center" />
+        <Socials size={18} className="block mt-4 sm:hidden" />
       </div>
     </nav>
   );

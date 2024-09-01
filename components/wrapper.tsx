@@ -9,9 +9,11 @@ export const Container = ({ children }: { children: React.ReactNode }) => {
 
 export const Title = ({ title, description }: { title: string; description?: string }) => {
   return (
-    <div className="flex flex-col justify-center items-center pb-6">
-      <h1 className="text-3xl font-bold font-poppins">{title}</h1>
-      <p className="text-muted-foreground font-roboto">{description}</p>
+    <div className="flex flex-col justify-center items-center pb-6 space-y-4 text-center">
+      <h1 className="text-3xl font-bold font-poppins text-transparent bg-gradient-to-t from-saiki-tertiary to-saiki-secondary bg-clip-text">
+        {title}
+      </h1>
+      <p className="text-muted-foreground font-roboto text-sm">{description}</p>
     </div>
   );
 };

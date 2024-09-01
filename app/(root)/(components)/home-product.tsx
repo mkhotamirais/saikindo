@@ -13,9 +13,9 @@ const productList = [
 
 export function HomeProduct() {
   return (
-    <section className="bg-gray-200">
+    <section className="bg-gray-100">
       <Container>
-        <div className="py-12">
+        <div className="py-16">
           <Title title="Products" />
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
             {productList.map((item, i) => (

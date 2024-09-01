@@ -17,11 +17,11 @@ export function HomeClient() {
   return (
     <section>
       <Container>
-        <div className="py-12">
+        <div className="py-16">
           <Title title="Our Clients" />
-          <div className="flex gap-4 flex-wrap justify-center">
+          <div className="flex gap-12 flex-wrap justify-center">
             {clientList.map((item, i) => (
-              <Avatar key={i} className="rounded-none size-32">
+              <Avatar key={i} className="rounded-none size-28">
                 <AvatarImage src={item.iconPath} className="object-contain object-center" />
               </Avatar>
             ))}
