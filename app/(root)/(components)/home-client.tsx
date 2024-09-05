@@ -15,13 +15,12 @@ const clientList = [
 
 export function HomeClient() {
   return (
-    <section>
+    <section className="py-6">
       <Container>
-        <div className="py-16">
-          <Title title="Our Clients" />
-          <div className="flex gap-12 flex-wrap justify-center">
+        <div>
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-6">
             {clientList.map((item, i) => (
-              <Avatar key={i} className="rounded-none size-28">
+              <Avatar key={i} className="rounded-none h-24 w-full">
                 <AvatarImage src={item.iconPath} className="object-contain object-center" />
               </Avatar>
             ))}

@@ -18,10 +18,24 @@ export const Title = ({ title, description }: { title: string; description?: str
   );
 };
 
-export const ClientHomePage = ({ children }: { children: React.ReactNode }) => {
+export const ClientWrapper = ({ children }: { children: React.ReactNode }) => {
   const { nav, closeNav } = useHome();
   const onClick = () => {
     if (nav) closeNav();
   };
   return <main onClick={onClick}>{children}</main>;
 };
+
+export function Banner({ title }: { title: string }) {
+  return (
+    <div className="bg-[url('https://placehold.co/800x300/png')] bg-cover bg-center ">
+      <div className="bg-gradient-to-t from-black/10 to-black/10 w-full h-64 border my-4 flex items-center justify-center">
+        <h1 className="text-6xl font-bold text-white">{title}</h1>
+      </div>
+    </div>
+  );
+}
+
+export function H2({ title, className = "text-center" }: { title: string; className?: string }) {
+  return <h2 className={`${className} text-xl font-bold text-green-600 p-2`}>{title}</h2>;
+}

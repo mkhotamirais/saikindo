@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Container, Title } from "@/components/wrapper";
+import { Separator } from "@/components/ui/separator";
+import { Container, H2, Title } from "@/components/wrapper";
 
 const ProfessionalismList = [
   {
@@ -25,11 +26,12 @@ const description = `We are committed to being a trusted partner in providing un
 
 export function HomeProfessionalism() {
   return (
-    <section className="bg-gray-100">
+    <section className="py-6">
       <Container>
-        <div className="py-16">
-          <Title title={title} description={description} />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+        <div className="p-3 bg-white">
+          <H2 className="" title={"Professionalism And Success"} />
+          <Separator />
+          <div className="py-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
             {ProfessionalismList.map((item, i) => (
               <Card key={i} className="shadow border-none">
                 <CardHeader className="font-poppins font-bold text-lg">{item.title}</CardHeader>

@@ -1,18 +1,21 @@
+"use client";
+
 import Link from "next/link";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { Container } from "../wrapper";
 import { Navbar, NavbarBtn } from "./navbar";
 import { FaEnvelope, FaGlobe, FaWhatsapp } from "react-icons/fa6";
+import { Button } from "../ui/button";
 
 export function Header() {
   return (
-    <header className="z-50 bg-white/80 backdrop-blur h-16 fixed w-full shadow-sm">
+    <header className="z-50 h-16 sticky top-0 w-full shadow-sm bg-white/70 backdrop-blur">
       <Container>
         <div className="h-full flex items-center justify-between">
           <Logo />
-          <Navbar />
-          <NavbarBtn />
-          <Socials size={20} className="hidden sm:block" />
+          {/* <Navbar /> */}
+          {/* <NavbarBtn /> */}
+          <Button className="bg-green-600 rounded-full hover:bg-green-500">Order Now</Button>
         </div>
       </Container>
     </header>

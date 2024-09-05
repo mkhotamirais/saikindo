@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Container, Title } from "@/components/wrapper";
+import { Separator } from "@/components/ui/separator";
+import { Container, H2, Title } from "@/components/wrapper";
 import {
   FaBriefcase,
   FaBuilding,
@@ -55,11 +56,12 @@ const description = `We Custom/design and manufactureuniforms and work wear, inc
 
 export function HomeServices() {
   return (
-    <section>
+    <section className="py-6">
       <Container>
-        <div className="py-16">
-          <Title title={title} description={description} />
-          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="bg-white p-3 rounded shadow">
+          <H2 className="" title={"Services"} />
+          <Separator />
+          <div className="py-3 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
             {serviceList.map((item, i) => (
               <div key={i} className="inline-flex justify-center flex-col items-center gap-4">
                 <item.icon size={32} />
