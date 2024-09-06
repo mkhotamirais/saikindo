@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { Container } from "../wrapper";
 import { Button } from "../ui/button";
+import { FaPhone } from "react-icons/fa6";
+import { Navbar, NavbarBtn } from "./navbar";
 
 export function Header() {
   return (
@@ -11,9 +13,12 @@ export function Header() {
       <Container>
         <div className="h-full flex items-center justify-between">
           <Logo />
-          {/* <Navbar /> */}
-          {/* <NavbarBtn /> */}
-          <Button className="bg-green-600 rounded-full hover:bg-green-500">Order Now</Button>
+          <Navbar />
+          <NavbarBtn />
+          <Button size={"sm"} className="bg-green-600 rounded-full hover:bg-green-500 gap-2 hidden md:flex">
+            <FaPhone />
+            Contact sales
+          </Button>
         </div>
       </Container>
     </header>

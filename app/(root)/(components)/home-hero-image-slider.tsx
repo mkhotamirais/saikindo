@@ -25,7 +25,7 @@ export default function SwiperPage() {
       effect={"coverflow"}
       loop={true}
       modules={[Navigation, Pagination, EffectCoverflow, Autoplay]}
-      spaceBetween={-250}
+      spaceBetween={-200}
       slidesPerView={3}
       navigation
       pagination={{ clickable: true }}

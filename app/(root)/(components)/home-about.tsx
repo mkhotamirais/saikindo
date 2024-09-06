@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Container } from "@/components/wrapper";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,13 +9,13 @@ export function HomeAbout() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="flex flex-col">
-            <h2 className="font-josefin text-5xl font-medium text-green-600 mb-4">About Us</h2>
+            <h2 className="font-josefin text-5xl font-medium text-green-600 mb-4 text-center lg:text-left">About Us</h2>
             <Image
               src="/images/building-1.jpg"
               width={500}
               height={500}
               alt="building"
-              className="rounded-lg block lg:hidden"
+              className="object-cover object-center rounded-lg block lg:hidden w-full h-72"
             />
             <div className="flex-1 text-sm leading-relaxed space-y-4 py-6">
               <p>
