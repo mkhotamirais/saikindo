@@ -4,7 +4,7 @@ import { useHome } from "@/hooks/use-home";
 import React from "react";
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
-  return <div className="h-full px-3 max-w-6xl mx-auto">{children}</div>;
+  return <div className="h-full px-4 max-w-6xl mx-auto">{children}</div>;
 };
 
 export const Title = ({ title, description }: { title: string; description?: string }) => {

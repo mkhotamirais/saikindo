@@ -1,22 +1,23 @@
 import { HomeHero } from "./(components)/home-hero";
-import { HomeProduct } from "./(components)/home-product";
 import { HomeServices } from "./(components)/home-services";
 import { HomeQuote } from "./(components)/home-quote";
 import { HomeProfessionalism } from "./(components)/home-professionalism";
 import HomeCategory from "./(components)/home-category";
 import { HomeAbout } from "./(components)/home-about";
+import HomeProductService from "./(components)/home-product-service";
+import { HomeClient } from "./(components)/home-client";
 
 export default function HomePage() {
   return (
     <div>
       <HomeHero />
       <HomeAbout />
-      <HomeQuote />
+      {/* <HomeQuote /> */}
+      <HomeProductService />
       <HomeCategory />
-      <HomeProduct />
-      <HomeServices />
-      <HomeProfessionalism />
-      {/* <HomeClient /> */}
+      {/* <HomeServices /> */}
+      {/* <HomeProfessionalism /> */}
+      <HomeClient />
     </div>
   );
 }
