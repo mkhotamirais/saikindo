@@ -12,7 +12,7 @@ const productServiceList = [
 
 export default function HomeProductService() {
   return (
-    <section className="py-20">
+    <section id="product-service" className="py-20 scroll-mt-16">
       <Container>
         <div>
           <h2 className="font-josefin text-5xl font-medium text-green-600 mb-4 text-center">Product & Service</h2>

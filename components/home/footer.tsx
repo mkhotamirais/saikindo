@@ -5,7 +5,7 @@ import { Socials } from "./socials";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="bg-gradient-to-t from-gray-800 to-gray-600 text-white">
       <Container>
         <div className="py-4 flex flex-col space-y-4">
           <div className="py-6">
@@ -41,7 +41,7 @@ export default function Footer() {
           <div className="flex justify-between">
             <small>
               Copyright &copy; {new Date().getFullYear()}{" "}
-              <a title="homepage saikindosg" href="/" className="text-primary font-bold hover:underline">
+              <a title="homepage saikindosg" href="/" className="font-bold hover:underline">
                 saikindosg
               </a>
             </small>

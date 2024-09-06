@@ -5,6 +5,7 @@ import { Container } from "@/components/wrapper";
 import HomeHeroImageSlider from "./home-hero-image-slider";
 import HomeHeroFlipText from "./home-hero-flip-text";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function HomeHero() {
   return (
@@ -33,8 +34,12 @@ export function HomeHero() {
               </motion.p>
             </div>
             <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.4 } }}>
-              <Button className="rounded-full self-start bg-green-600 border-none hover:bg-green-500" size={"lg"}>
-                Our Products
+              <Button
+                asChild
+                className="rounded-full self-start bg-green-600 border-none hover:bg-green-500"
+                size={"lg"}
+              >
+                <Link href="#product-service">Our Products</Link>
               </Button>
             </motion.div>
           </div>
