@@ -14,7 +14,7 @@ export default function HomePage() {
       {/* <Hero /> */}
       <HomeHero />
       <HomeCategory />
-      {/* <HomeQuote /> */}
+      <HomeQuote />
       <HomeProduct />
       <HomeServices />
       <HomeProfessionalism />
