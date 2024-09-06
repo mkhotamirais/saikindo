@@ -14,8 +14,8 @@ const config = {
     },
     extend: {
       fontFamily: {
-        roboto: ["Roboto", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
+        ptsans: ["PT Sans", "sans-serif"],
+        josefin: ["Josefin Sans", "sans-serif"],
       },
       colors: {
         saiki: {

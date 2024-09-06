@@ -64,7 +64,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={`${inter.className} font-roboto bg-gray-50`}>
+      <body className={`${inter.className} font-ptsans`}>
         <Header />
         <ClientWrapper>{children}</ClientWrapper>
         <Footer />

@@ -4,7 +4,6 @@ import { useHome } from "@/hooks/use-home";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { Socials } from "./header";
 
 export function NavbarBtn() {
   const { nav, openNav, closeNav } = useHome();
@@ -50,7 +49,7 @@ export function Navbar() {
             {item.title}
           </Link>
         ))}
-        <Socials size={18} className="block mt-4 sm:hidden" />
+        {/* <Socials size={18} className="block mt-4 sm:hidden" /> */}
       </div>
     </nav>
   );

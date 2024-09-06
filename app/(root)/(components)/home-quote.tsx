@@ -2,10 +2,10 @@ import { Container } from "@/components/wrapper";
 
 export function HomeQuote() {
   return (
-    <section className="bg-gray-100">
+    <section className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-green-50 to-green-300">
       <Container>
-        <div className="py-10 text-center">
-          <blockquote className="max-w-3xl mx-auto text-xl sm:text-2xl italic font-medium">
+        <div className="py-8 text-center">
+          <blockquote className="max-w-3xl mx-auto text-lg sm:text-xl italic font-medium">
             <span className="text-5xl">&ldquo;</span>
             Customers are more inclined to do business with employees who wear uniforms because they stand out as
             professionals and are seen as being more competent and knowledgeable.

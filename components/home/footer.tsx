@@ -1,10 +1,11 @@
 import { Separator } from "../ui/separator";
 import { Container } from "../wrapper";
-import { Logo, Socials } from "./header";
+import { Logo } from "./header";
+import { Socials } from "./socials";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-t from-gray-50 to-gray-100 mt-4">
+    <footer className="bg-gray-800 text-white">
       <Container>
         <div className="py-4 flex flex-col space-y-4">
           <div className="py-6">
@@ -12,7 +13,7 @@ export default function Footer() {
             <address className="text-sm py-2">
               Komp. LPTI Jl. Paneli No.13A RT03/08 Kel Ciparigi Kecamatan Bogor Utara Email:{" "}
             </address>
-            <div className="font-roboto text-muted-foreground space-y-3 mx-auto text-xs">
+            <div className="space-y-3 mx-auto text-xs">
               <p>
                 PT. Saikindo Surya Gumiwang is a company that professional and reliable in the field of cleaning and
                 building maintenance, power service, FTTH material supply, uniform, and event organizers.
@@ -44,7 +45,7 @@ export default function Footer() {
                 saikindosg
               </a>
             </small>
-            <Socials size={20} />
+            <Socials />
           </div>
         </div>
       </Container>
