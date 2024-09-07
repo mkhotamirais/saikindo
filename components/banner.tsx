@@ -9,7 +9,7 @@ export function Banner({ title, image }: { title: string; image: string }) {
     <motion.div
       initial={{ opacity: 0, y: -200 }}
       animate={{ opacity: 1, y: 0 }}
-      className="shadow-lg rounded-xl relative overflow-hidden bg-gray-50 w-full h-56 lg:h-64 my-4"
+      className="shadow-lg rounded-xl relative overflow-hidden bg-gray-50 w-full h-52 lg:h-64 my-4"
     >
       <div className="w-48 h-48 blur-xl bg-green-200 absolute top-0 -right-12 rounded-full" />
       <div className="w-24 h-24 blur-xl bg-green-100 absolute top-5 left-5 rounded-full" />
@@ -31,7 +31,7 @@ export function Banner({ title, image }: { title: string; image: string }) {
             <motion.h1
               initial={{ scale: 0 }}
               animate={{ scale: 1, transition: { delay: 0.2 } }}
-              className="text-4xl lg:text-6xl font-bold text-green-600 font-josefin"
+              className="text-3xl lg:text-6xl font-bold text-green-600 font-josefin px-2"
             >
               {title}
             </motion.h1>

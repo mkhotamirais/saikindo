@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClientWrapper } from "@/components/wrapper";
 import { Header } from "@/components/home/header";
-import Footer from "@/components/home/footer";
+import { Footer } from "@/components/home/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -64,7 +64,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={`${inter.className} font-ptsans flex flex-col`}>
+      <body className={`${inter.className} font-ptsans flex flex-col min-h-screen`}>
         <Header />
         <ClientWrapper>{children}</ClientWrapper>
         <Footer />

@@ -15,10 +15,7 @@ export function Header() {
           <Logo />
           <Navbar />
           <NavbarBtn />
-          <Button size={"sm"} className="bg-green-600 rounded-full hover:bg-green-500 gap-2 hidden md:flex">
-            <FaPhone />
-            Contact sales
-          </Button>
+          <ContactSales className="hidden md:flex" />
         </div>
       </Container>
     </header>
@@ -32,5 +29,14 @@ export function Logo() {
         <AvatarImage src="/logo.png" alt="saiki logo" className="object-contain object-center" />
       </Avatar>
     </Link>
+  );
+}
+
+export function ContactSales({ className }: { className: string }) {
+  return (
+    <Button size={"sm"} className={`${className} bg-green-600 rounded-full hover:bg-green-500 gap-2`}>
+      <FaPhone />
+      Contact sales
+    </Button>
   );
 }

@@ -4,6 +4,7 @@ import { useHome } from "@/hooks/use-home";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { ContactSales } from "./header";
 
 export function NavbarBtn() {
   const { nav, openNav, closeNav } = useHome();
@@ -23,6 +24,7 @@ export function NavbarBtn() {
 
 const navbarMenu = [
   { href: "/", title: "Home" },
+  { href: "/about", title: "About" },
   { href: "/uniform", title: "Uniform" },
   { href: "/power", title: "Power" },
   { href: "/event-organizer", title: "Event Organizer" },
@@ -46,11 +48,12 @@ export function Navbar() {
             onClick={onClick}
             href={item.href}
             key={i}
-            className="text-sm text-muted-foreground py-2 md:py-0 hover:text-primary"
+            className="text-sm text-muted-foreground py-3 md:py-0 hover:text-primary"
           >
             {item.title}
           </Link>
         ))}
+        <ContactSales className="flex self-start mt-4 md:hidden" />
         {/* <Socials size={18} className="block mt-4 sm:hidden" /> */}
       </div>
     </nav>
