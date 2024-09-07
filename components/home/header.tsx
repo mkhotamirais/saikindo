@@ -6,16 +6,23 @@ import { Container } from "../wrapper";
 import { Button } from "../ui/button";
 import { FaPhone } from "react-icons/fa6";
 import { Navbar, NavbarBtn } from "./navbar";
+import { motion } from "framer-motion";
 
 export function Header() {
   return (
     <header className="z-50 h-16 sticky top-0 w-full shadow hover:shadow-md shadow-green-50 hover:shadow-green-100 bg-white transition">
       <Container>
         <div className="h-full flex items-center justify-between">
-          <Logo />
-          <Navbar />
+          <motion.div initial={{ opacity: 0, x: -150 }} animate={{ opacity: 1, x: 0 }}>
+            <Logo />
+          </motion.div>
+          <motion.div initial={{ scale: 0, y: 150 }} animate={{ scale: 1, y: 0 }}>
+            <Navbar />
+          </motion.div>
           <NavbarBtn />
-          <ContactSales className="hidden md:flex" />
+          <motion.div initial={{ opacity: 0, x: 150 }} animate={{ opacity: 1, x: 0 }}>
+            <ContactSales className="hidden md:flex" />
+          </motion.div>
         </div>
       </Container>
     </header>
