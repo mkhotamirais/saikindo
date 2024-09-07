@@ -8,11 +8,13 @@ import { motion } from "framer-motion";
 
 export function HomeAbout() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col">
-            <h2 className="font-josefin text-5xl font-medium text-green-600 mb-4 text-center lg:text-left">About Us</h2>
+            <h2 className="font-josefin text-4xl lg:text-5xl font-medium text-green-600 mb-4 text-center lg:text-left">
+              About Us
+            </h2>
             <Image
               src="/images/building-1.jpg"
               width={500}

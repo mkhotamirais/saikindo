@@ -17,7 +17,7 @@ export function Footer() {
             <small>
               Copyright &copy; {new Date().getFullYear()}{" "}
               <a title="homepage saikindosg" href="/" className="font-bold hover:underline">
-                saikindosg
+                saikindo
               </a>
             </small>
             <Socials />

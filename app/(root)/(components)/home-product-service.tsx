@@ -7,21 +7,21 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const productServiceList = [
-  { href: "/uniform", title: "Uniform", image: "/images/uniform2.png" },
-  { href: "/power", title: "Power", image: "/images/saiki-power-1.png" },
-  { href: "/event-organizer", title: "Event Organizer", image: "/images/saiki-event-1.png" },
-  { href: "/health", title: "Health", image: "/images/saiki-porto-3.png" },
+  { href: "/uniform", title: "Uniform", image: "/images/banner/storyset-uniform.png" },
+  { href: "/power", title: "Power", image: "/images/banner/storyset-power.png" },
+  { href: "/event-organizer", title: "Event Organizer", image: "/images/banner/storyset-event.png" },
+  { href: "/health", title: "Health", image: "/images/banner/storyset-health.png" },
 ];
 
 export default function HomeProductService() {
   return (
-    <section id="product-service" className="py-20 scroll-mt-16">
+    <section id="product-service" className="py-16 scroll-mt-16">
       <Container>
         <div>
           <motion.h2
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-josefin text-5xl font-medium text-green-600 mb-4 text-center"
+            className="font-josefin text-4xl lg:text-5xl font-medium text-green-600 mb-4 text-center"
           >
             Product & Service
           </motion.h2>
@@ -41,7 +41,7 @@ export default function HomeProductService() {
                   alt="image saiki"
                 />
                 <div className="transition p-4">
-                  <h3 className="font-josefin font-semibold text-2xl text-center">{item.title}</h3>
+                  <h3 className="font-josefin font-semibold text-2xl text-center text-green-600">{item.title}</h3>
                 </div>
                 <Link
                   href={item.href}

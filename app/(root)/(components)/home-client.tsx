@@ -25,12 +25,12 @@ const clientList = [
 
 export function HomeClient() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <Container>
         <motion.h2
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          className="font-josefin text-5xl font-medium text-green-600 mb-4 text-center"
+          className="font-josefin text-4xl lg:text-5xl font-medium text-green-600 mb-4 text-center"
         >
           Our Clients
         </motion.h2>

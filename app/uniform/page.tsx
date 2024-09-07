@@ -14,9 +14,11 @@ export default function UniformPage() {
         <div className="flex flex-col gap-4">
           <div className="bg-white p-4 shadow rounded">
             <H2 className="" title="Portofolio" />
-            <div className="flex gap-1">
+            <div className="flex gap-1 flex-wrap py-2">
               {portofolioList.map((item, i) => (
-                <Badge key={i}>{item}</Badge>
+                <Badge key={i} className="bg-green-600">
+                  {item}
+                </Badge>
               ))}
             </div>
             <div className="w-full h-56 bg-gray-100 flex items-center justify-center">content</div>
@@ -27,9 +29,11 @@ export default function UniformPage() {
           </div>
           <div className="bg-white p-4 shadow rounded">
             <H2 className="" title="Info Lainnya" />
-            <div className="flex gap-1">
+            <div className="flex gap-1 flex-wrap">
               {infoLainnyaList.map((item, i) => (
-                <Badge key={i}>{item}</Badge>
+                <Badge key={i} className="bg-green-600">
+                  {item}
+                </Badge>
               ))}
             </div>
             <div className="w-full h-56 bg-gray-100 flex items-center justify-center">content</div>
