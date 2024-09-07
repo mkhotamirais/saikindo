@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
-import { Banner, Container, H2 } from "@/components/wrapper";
+import { Container, H2 } from "@/components/wrapper";
 import { HomeClient } from "../(root)/(components)/home-client";
+import { Banner } from "@/components/banner";
 
 const portofolioList = ["Seragam/uniform", "Jaket", "Polo", "Wearpack", "Rompi", "Denim", "shoes"];
 const infoLainnyaList = ["Contoh design", "Cara order", "Bahan", "Standart ukuran"];
@@ -9,7 +10,7 @@ export default function UniformPage() {
   return (
     <div>
       <Container>
-        <Banner title="Uniform" />
+        <Banner title="Uniform" image="/images/banner/storyset-uniform.png" />
         <div className="flex flex-col gap-4">
           <div className="bg-white p-4 shadow rounded">
             <H2 className="" title="Portofolio" />

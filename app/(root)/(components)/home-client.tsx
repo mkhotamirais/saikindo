@@ -1,5 +1,8 @@
+"use client";
+
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { Container, Title } from "@/components/wrapper";
+import { Container } from "@/components/wrapper";
+import { motion } from "framer-motion";
 
 const clientList = [
   { iconPath: "/images/clients/client-1.png", label: "" },
@@ -24,8 +27,18 @@ export function HomeClient() {
   return (
     <section className="py-20 bg-gray-50">
       <Container>
-        <h2 className="font-josefin text-5xl font-medium text-green-600 mb-4 text-center">Our Clients</h2>
-        <div className="bg-white p-4 rounded-xl shadow-md">
+        <motion.h2
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="font-josefin text-5xl font-medium text-green-600 mb-4 text-center"
+        >
+          Our Clients
+        </motion.h2>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
+          className="bg-white p-4 rounded-xl shadow-md"
+        >
           <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-8">
             {clientList.map((item, i) => (
               <Avatar key={i} className="rounded-none h-20 w-full">
@@ -33,7 +46,7 @@ export function HomeClient() {
               </Avatar>
             ))}
           </div>
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

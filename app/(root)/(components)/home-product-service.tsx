@@ -1,7 +1,10 @@
+"use client";
+
 import { Container } from "@/components/wrapper";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const productServiceList = [
   { href: "/uniform", title: "Uniform", image: "/images/uniform2.png" },
@@ -15,8 +18,18 @@ export default function HomeProductService() {
     <section id="product-service" className="py-20 scroll-mt-16">
       <Container>
         <div>
-          <h2 className="font-josefin text-5xl font-medium text-green-600 mb-4 text-center">Product & Service</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-3 my-4">
+          <motion.h2
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="font-josefin text-5xl font-medium text-green-600 mb-4 text-center"
+          >
+            Product & Service
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
+            className="grid grid-cols-1 md:grid-cols-4 gap-3 my-4"
+          >
             {productServiceList.map((item, i) => (
               <div key={i} className="group relative shadow-md hover:shadow-lg rounded-md overflow-hidden">
                 <div className="z-10 absolute bg-black/15 inset-0 opacity-0 group-hover:opacity-100 transition duration-500" />
@@ -38,7 +51,7 @@ export default function HomeProductService() {
                 </Link>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </Container>
     </section>

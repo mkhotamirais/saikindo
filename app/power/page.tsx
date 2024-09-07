@@ -1,10 +1,11 @@
-import { Banner, Container, H2 } from "@/components/wrapper";
+import { Banner } from "@/components/banner";
+import { Container, H2 } from "@/components/wrapper";
 
 export default function PowerPage() {
   return (
     <div>
       <Container>
-        <Banner title="Power" />
+        <Banner title="Power" image="/images/banner/storyset-power.png" />
         <div className="flex flex-col gap-4">
           <div className="bg-white p-4 shadow rounded">
             <H2 className="" title="Maintenence" />

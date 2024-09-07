@@ -1,10 +1,11 @@
-import { Banner, Container, H2 } from "@/components/wrapper";
+import { Banner } from "@/components/banner";
+import { Container, H2 } from "@/components/wrapper";
 
 export default function EventOrganizer() {
   return (
     <div>
       <Container>
-        <Banner title="Event Organizer" />
+        <Banner title="Event Organizer" image="/images/banner/storyset-event.png" />
         <div className="flex flex-col gap-4">
           <div className="bg-white p-4 shadow rounded">
             <H2 className="" title="Booth production" />

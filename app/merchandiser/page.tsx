@@ -1,10 +1,11 @@
-import { Banner, Container, H2 } from "@/components/wrapper";
+import { Banner } from "@/components/banner";
+import { Container, H2 } from "@/components/wrapper";
 
 export default function MerchandiserPage() {
   return (
     <div>
       <Container>
-        <Banner title="Merchandiser" />
+        <Banner title="Merchandiser" image="/images/banner/storyset-event.png" />
         <div className="flex flex-col gap-4">
           <div className="bg-white p-4 shadow rounded">
             <H2 className="" title="Tote Bag" />

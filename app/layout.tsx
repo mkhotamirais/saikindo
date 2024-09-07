@@ -64,7 +64,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={`${inter.className} font-ptsans`}>
+      <body className={`${inter.className} font-ptsans flex flex-col`}>
         <Header />
         <ClientWrapper>{children}</ClientWrapper>
         <Footer />
