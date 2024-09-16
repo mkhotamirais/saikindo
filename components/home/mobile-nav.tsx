@@ -9,10 +9,11 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import { FaBars, FaXmark } from "react-icons/fa6";
+import { FaBars, FaWhatsapp, FaXmark } from "react-icons/fa6";
 import { ContactSales, Logo } from "./header";
 import Link from "next/link";
 import { navbarMenu } from "./desktop-nav";
+import { Button } from "../ui/button";
 
 export default function MobileNav() {
   return (
@@ -40,7 +41,16 @@ export default function MobileNav() {
         </div>
         <div className="absolute right-0 p-3 bottom-0">
           <SheetClose asChild>
-            <ContactSales />
+            <Button
+              size={"sm"}
+              asChild
+              className={`bg-saikindo-secondary-600 rounded-full hover:bg-saikindo-secondary-500 gap-2`}
+            >
+              <Link href="/#contact-us" title="Contact Us" className="flex items-center gap-2">
+                <FaWhatsapp size={22} />
+                Contact Us
+              </Link>
+            </Button>
           </SheetClose>
         </div>
       </SheetContent>
