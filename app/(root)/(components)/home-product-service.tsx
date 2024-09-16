@@ -43,10 +43,10 @@ export default function HomeProductService() {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
-          className="grid grid-cols-1 md:grid-cols-4 gap-4 my-4"
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-8"
         >
           {productServiceList.map((item, i) => (
-            <div key={i} className="relative overflow-hidden flex flex-col items-center">
+            <div key={i} className="relative overflow-hidden flex flex-col items-center mt-4 xl:mt-0">
               <Image
                 src={item.image}
                 width={500}

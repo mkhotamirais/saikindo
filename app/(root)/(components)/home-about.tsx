@@ -12,7 +12,7 @@ export function HomeAbout() {
     <section className="py-16 bg-gray-50">
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16">
         <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col">
-          <H2 className="" title="About Us" />
+          <H2 className="text-center lg:text-left" title="About Us" />
           <Image
             src="/images/building-1.jpg"
             width={500}
