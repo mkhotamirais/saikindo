@@ -1,7 +1,7 @@
 "use client";
 
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { Container } from "@/components/wrapper";
+import { H2 } from "@/components/wrapper";
 import { motion } from "framer-motion";
 
 const clientList = [
@@ -26,14 +26,8 @@ const clientList = [
 export function HomeClient() {
   return (
     <section className="py-16 bg-gray-50">
-      <Container>
-        <motion.h2
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="font-josefin text-4xl lg:text-5xl font-medium text-green-600 mb-4 text-center"
-        >
-          Our Clients
-        </motion.h2>
+      <div className="container">
+        <H2 title="Our Clients" />
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
@@ -47,7 +41,7 @@ export function HomeClient() {
             ))}
           </div>
         </motion.div>
-      </Container>
+      </div>
     </section>
   );
 }

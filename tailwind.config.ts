@@ -7,9 +7,20 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem", // Padding default untuk layar kecil
+        sm: "2rem", // Padding untuk layar kecil (mobile)
+        lg: "4rem", // Padding untuk layar besar (desktop)
+        xl: "5rem", // Padding untuk layar sangat besar (monitor)
+        "2xl": "6rem", // Padding untuk layar 2XL
+      },
       screens: {
-        "2xl": "1400px",
+        sm: "100%", // Full width untuk layar kecil
+        md: "728px", // Width yang pas untuk medium screen
+        lg: "1024px", // Width standar untuk layar besar
+        xl: "1280px", // Lebih besar lagi
+        "2xl": "1400px", // Sama seperti yang kamu sebutkan untuk 2XL
+        "3xl": "1600px", // Tambahkan satu ukuran layar ekstra besar
       },
     },
     extend: {
@@ -18,11 +29,31 @@ const config = {
         josefin: ["Josefin Sans", "sans-serif"],
       },
       colors: {
-        saiki: {
-          primary: "#F0DC11",
-          secondary: "#501AF0",
-          tertiary: "#9DF01A",
-          accent: "#5A459B",
+        saikindo: {
+          primary: {
+            50: "#EBF5FF", // Biru sangat terang
+            100: "#D1E9FF", // Biru terang
+            200: "#A6CFFF", // Biru yang lebih terang
+            300: "#75B3FF", // Biru sedang
+            400: "#3995FF", // Biru yang lebih hidup
+            500: "#007BFF", // Biru utama
+            600: "#006AE6", // Biru sedikit lebih gelap
+            700: "#0056B3", // Biru lebih gelap
+            800: "#00408A", // Biru sangat gelap
+            900: "#002D66", // Biru paling gelap
+          },
+          secondary: {
+            50: "#FFEAE9", // Merah sangat terang
+            100: "#FFD1D1", // Merah terang
+            200: "#FFA3A3", // Merah yang lebih terang
+            300: "#FF7373", // Merah sedang
+            400: "#FF4D4D", // Merah lebih mencolok
+            500: "#FF4136", // Merah utama
+            600: "#E6392F", // Merah sedikit lebih gelap
+            700: "#B22C24", // Merah lebih gelap
+            800: "#8A211B", // Merah sangat gelap
+            900: "#661715", // Merah paling gelap
+          },
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

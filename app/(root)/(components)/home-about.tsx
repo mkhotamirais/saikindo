@@ -1,54 +1,59 @@
 "use client";
 
-import { Container } from "@/components/wrapper";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRightLong, FaPlay } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { H2 } from "@/components/wrapper";
+import { Button } from "@/components/ui/button";
 
 export function HomeAbout() {
   return (
     <section className="py-16 bg-gray-50">
-      <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col">
-            <h2 className="font-josefin text-4xl lg:text-5xl font-medium text-green-600 mb-4 text-center lg:text-left">
-              About Us
-            </h2>
-            <Image
-              src="/images/building-1.jpg"
-              width={500}
-              height={500}
-              alt="building"
-              className="object-cover object-center rounded-lg block lg:hidden w-full h-72"
-            />
-            <div className="flex-1 text-sm leading-relaxed space-y-4 py-6">
-              <p>
-                PT. Saikindo Surya Gumiwang is a company that professional and reliable in the field of cleaning and
-                building maintenance, power service, FTTH material supply, uniform, and event organizers.
-              </p>
-              <p>
-                PT. Saikindo Surya Gumiwang has a focus on delivering the right solution for all types of related needs
-                building cleaning and maintenance, electrical service, provision FTTH materials, uniform, and event
-                organizers.
-              </p>
-            </div>
-            <Link href="/about" className="group text-green-600 flex items-center max-w-fit mt-auto">
-              <div className="group-hover:underline">View More</div>
-              <FaArrowRightLong className="ml-2 group-hover:translate-x-2 transition" />
-            </Link>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}>
-            <Image
-              src="/images/building-1.jpg"
-              width={500}
-              height={500}
-              alt="building"
-              className="rounded-lg hidden lg:block"
-            />
-          </motion.div>
-        </div>
-      </Container>
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col">
+          <H2 className="" title="About Us" />
+          <Image
+            src="/images/building-1.jpg"
+            width={500}
+            height={500}
+            alt="building"
+            className="object-cover object-center rounded-lg block lg:hidden w-full h-72"
+          />
+          <div className="flex-1 text-sm leading-relaxed space-y-4 py-6">
+            <p>
+              PT. Saikindo Surya Gumiwang is a company that professional and reliable in the field of cleaning and
+              building maintenance, power service, FTTH material supply, uniform, and event organizers.
+            </p>
+            <p>
+              PT. Saikindo Surya Gumiwang has a focus on delivering the right solution for all types of related needs
+              building cleaning and maintenance, electrical service, provision FTTH materials, uniform, and event
+              organizers.
+            </p>
+          </div>
+          <div className="flex gap-3 items-center">
+            <Button className="flex gap-2 rounded-full bg-saikindo-secondary-600 hover:bg-saikindo-secondary-500">
+              <FaPlay />
+              Watch Video
+            </Button>
+            <Button variant={"link"} asChild>
+              <Link href="/about" className="group text-saikindo-secondary-600 flex items-center max-w-fit mt-auto">
+                <div className="group-hover:underline">View More</div>
+                <FaArrowRightLong className="ml-2 group-hover:translate-x-2 transition" />
+              </Link>
+            </Button>
+          </div>
+        </motion.div>
+        <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}>
+          <Image
+            src="/images/building-1.jpg"
+            width={500}
+            height={500}
+            alt="building"
+            className="rounded-lg hidden lg:block"
+          />
+        </motion.div>
+      </div>
     </section>
   );
 }

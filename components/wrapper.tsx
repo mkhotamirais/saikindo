@@ -1,7 +1,8 @@
 "use client";
 
-import { useHome } from "@/hooks/use-home";
 import React from "react";
+import { useHome } from "@/hooks/use-home";
+import { motion } from "framer-motion";
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
   return <div className="h-full px-4 max-w-6xl mx-auto">{children}</div>;
@@ -27,5 +28,13 @@ export const ClientWrapper = ({ children }: { children: React.ReactNode }) => {
 };
 
 export function H2({ title, className = "text-center" }: { title: string; className?: string }) {
-  return <h2 className={`${className} text-xl font-bold text-green-600 p-2`}>{title}</h2>;
+  return (
+    <motion.h2
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      className={`font-josefin text-4xl lg:text-5xl font-medium text-saikindo-secondary-600 mb-4 ${className}`}
+    >
+      {title}
+    </motion.h2>
+  );
 }

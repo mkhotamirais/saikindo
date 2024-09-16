@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Container, H2, Title } from "@/components/wrapper";
+import { H2, Title } from "@/components/wrapper";
 import {
   FaBriefcase,
   FaBuilding,
@@ -57,7 +57,7 @@ const description = `We Custom/design and manufactureuniforms and work wear, inc
 export function HomeServices() {
   return (
     <section className="py-6">
-      <Container>
+      <div className="container">
         <div className="bg-white p-3 rounded shadow">
           <H2 className="" title={"Services"} />
           <Separator />
@@ -70,7 +70,7 @@ export function HomeServices() {
             ))}
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
