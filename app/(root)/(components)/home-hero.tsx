@@ -36,7 +36,7 @@ export function HomeHero() {
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.4 } }}>
             <Button
               asChild
-              className="rounded-full self-start bg-saikindo-secondary-600 border-none hover:bg-saikind0-secondary-500"
+              className="rounded-full self-start bg-saikindo-secondary-600 border-none hover:bg-saikindo-secondary-500 hover:scale-110 transition"
               size={"lg"}
             >
               <Link href="#product-service">Our Products</Link>

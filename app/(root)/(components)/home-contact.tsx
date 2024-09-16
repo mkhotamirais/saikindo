@@ -34,7 +34,7 @@ export default function HomeContact() {
                 </div>
                 <Input type="text" placeholder="Subject" />
                 <Textarea placeholder="Message" />
-                <Button type="submit">
+                <Button type="submit" className="bg-saikindo-secondary-600 hover:bg-saikindo-secondary-500">
                   <FaPaperPlane className="mr-2" />
                   Submit
                 </Button>

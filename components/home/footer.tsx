@@ -13,7 +13,7 @@ import Link from "next/link";
 
 const contactUsMenu = [
   {
-    icon: FaMapLocation,
+    icon: null,
     href: "https://maps.app.goo.gl/2pxVdjk4N2VjyqTC9",
     label: "Komp. LPTI Jl. Paneli No.13A RT03/08 Kel Ciparigi Kecamatan Bogor Utara",
     title: "Our Location",
@@ -83,9 +83,9 @@ export function Footer() {
                   key={i}
                   href={item.href}
                   title={item.title}
-                  className="text-sm hover:text-saikindo-secondary-300 transition flex items-center gap-2 max-w-fit"
+                  className="text-sm hover:text-saikindo-secondary-200 transition flex items-center gap-2 max-w-fit"
                 >
-                  <item.icon size={16} className="min-w-max" />
+                  {item?.icon && <item.icon size={16} className="min-w-max" />}
                   {item.label}
                 </Link>
               ))}
@@ -101,7 +101,7 @@ export function Footer() {
                       key={i}
                       href={menu.href}
                       title={menu.label}
-                      className="font-ptsans text-sm hover:text-saikindo-secondary-300 transition w-fit"
+                      className="font-ptsans text-sm hover:text-saikindo-secondary-200 transition w-fit"
                     >
                       {menu.label}
                     </Link>
@@ -116,7 +116,11 @@ export function Footer() {
         <div className="container mx-auto py-6 flex flex-col sm:flex-row gap-4 justify-between items-center">
           <small className="min-w-max font-ptsans">
             Copyright &copy; {new Date().getFullYear()}{" "}
-            <a title="homepage saikindosg" href="/" className="font-medium text-saikindo-secondary-400 hover:underline">
+            <a
+              title="homepage saikindosg"
+              href="/"
+              className="font-semibold text-saikindo-secondary-500 hover:underline"
+            >
               PT Saikindo Surya Gumiwang
             </a>
           </small>
