@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClientWrapper } from "@/components/wrapper";
 import { Header } from "@/components/home/header";
 import { Footer } from "@/components/home/footer";
+import BackToTop from "@/components/back-to-top";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -68,6 +69,7 @@ export default function RootLayout({
         <Header />
         <ClientWrapper>{children}</ClientWrapper>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );
