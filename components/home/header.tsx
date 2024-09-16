@@ -48,9 +48,9 @@ export function ContactSales({ className }: { className?: string }) {
       asChild
       className={`${className} bg-saikindo-secondary-600 rounded-full hover:bg-saikindo-secondary-500 gap-2`}
     >
-      <Link href="https://wa.me/628111775774" title="Contact Us" target="_blank" className="flex items-center gap-2">
+      <Link href="#contact-us" title="Contact Us" className="flex items-center gap-2">
         <FaWhatsapp size={22} />
-        Contact sales
+        Contact Us
       </Link>
     </Button>
   );

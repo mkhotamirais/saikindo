@@ -14,8 +14,8 @@ const contactList = [
 
 export default function HomeContact() {
   return (
-    <section className="bg-[url('/images/building-1.jpg')] bg-cover bg-center bg-fixed">
-      <div className="bg-black/70 p-4 py-16">
+    <section id="contact-us" className="bg-[url('/images/building-1.jpg')] bg-cover bg-center bg-fixed">
+      <div className="bg-black/70 py-16">
         <div className="container">
           <H2 title="Contact Us" />
           <p className="text-center text-white">

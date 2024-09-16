@@ -18,7 +18,7 @@ const productServiceList = [
   {
     href: "/power",
     title: "Power",
-    image: "/images/saiki-power-2.png",
+    image: "/images/saiki-tower-1.png",
     description: "Empowering your business with innovative energy solutions for a sustainable future.",
   },
   {
@@ -43,15 +43,18 @@ export default function HomeProductService() {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
-          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-8"
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-8"
         >
           {productServiceList.map((item, i) => (
-            <div key={i} className="relative overflow-hidden flex flex-col items-center mt-4 xl:mt-0">
+            <div
+              key={i}
+              className="relative overflow-hidden flex flex-col items-center mt-4 xl:mt-0 p-4 shadow xl:shadow-none rounded-xl"
+            >
               <Image
                 src={item.image}
                 width={500}
                 height={500}
-                className="h-56 w-56 object-cover object-center rounded-full shadow-lg"
+                className="size-40 object-cover object-center rounded-full shadow-lg"
                 alt="image saiki"
               />
               <div className="transition p-4">
