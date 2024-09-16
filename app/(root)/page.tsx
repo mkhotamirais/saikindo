@@ -6,6 +6,7 @@ import HomeCategory from "./(components)/home-category";
 import { HomeAbout } from "./(components)/home-about";
 import HomeProductService from "./(components)/home-product-service";
 import { HomeClient } from "./(components)/home-client";
+import HomeContact from "./(components)/home-contact";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
       {/* <HomeServices /> */}
       {/* <HomeProfessionalism /> */}
       <HomeClient />
+      <HomeContact />
     </div>
   );
 }

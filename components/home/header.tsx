@@ -7,23 +7,27 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import MobileNav from "./mobile-nav";
 import { DesktopNav } from "./desktop-nav";
+import { useScrollDirection } from "@/hooks/use-scroll-direaction";
 
 export function Header() {
+  const scrollDirection = useScrollDirection();
+
   return (
-    <header className="z-50 h-16 sticky top-0 w-full shadow hover:shadow-md bg-saikindo-primary-700 transition">
-      <div className="container mx-auto h-full flex items-center justify-between">
+    <motion.header
+      initial={{ y: 0 }}
+      animate={{ y: scrollDirection === "up" ? -100 : 0, transition: { duration: 0.3 } }}
+      className={`z-50 h-16 fixed top-0 left-0 right-0 w-full bg-saikindo-primary-700`}
+    >
+      <div className="container mx-auto h-full flex items-center justify-between font-ptsans">
         <motion.div initial={{ opacity: 0, x: -150 }} animate={{ opacity: 1, x: 0 }}>
           <Logo />
         </motion.div>
         <div className="flex items-center gap-6">
           <MobileNav />
           <DesktopNav />
-          {/* <motion.div initial={{ opacity: 0, x: 150 }} animate={{ opacity: 1, x: 0 }}>
-            <ContactSales className="hidden md:flex" />
-          </motion.div> */}
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }
 

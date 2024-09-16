@@ -20,7 +20,7 @@ export function HomeAbout() {
             alt="building"
             className="object-cover object-center rounded-lg block lg:hidden w-full h-72"
           />
-          <div className="flex-1 text-sm leading-relaxed space-y-4 py-6">
+          <div className="flex-1 leading-relaxed space-y-4 py-6">
             <p>
               PT. Saikindo Surya Gumiwang is a company that professional and reliable in the field of cleaning and
               building maintenance, power service, FTTH material supply, uniform, and event organizers.

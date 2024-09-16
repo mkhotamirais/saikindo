@@ -24,7 +24,11 @@ export const ClientWrapper = ({ children }: { children: React.ReactNode }) => {
   const onClick = () => {
     if (nav) closeNav();
   };
-  return <main onClick={onClick}>{children}</main>;
+  return (
+    <main onClick={onClick} className="pt-16 grow">
+      {children}
+    </main>
+  );
 };
 
 export function H2({ title, className = "text-center" }: { title: string; className?: string }) {
