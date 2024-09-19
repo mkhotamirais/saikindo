@@ -1,8 +1,12 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { H2 } from "@/components/wrapper";
+import { motion, useInView } from "framer-motion";
 import Link from "next/link";
+import { useRef } from "react";
 import { FaWhatsapp, FaPaperPlane } from "react-icons/fa6";
 
 const contactList = [
@@ -13,11 +17,16 @@ const contactList = [
 ];
 
 export default function HomeContact() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref);
+
   return (
-    <section id="contact-us" className="bg-[url('/images/building-1.jpg')] bg-cover bg-center bg-fixed">
+    <section ref={ref} id="contact-us" className="bg-[url('/images/building-1.jpg')] bg-cover bg-center bg-fixed">
       <div className="bg-black/70 py-16">
         <div className="container">
-          <H2 title="Contact Us" />
+          <motion.div animate={{ x: isInView ? 0 : -200, transition: { duration: 0.3 } }}>
+            <H2 title="Contact Us" />
+          </motion.div>
           <p className="text-center text-white">
             You can contact us directly via email at{" "}
             <Link href="mailto:office.saikindosg@gmail.com" className="text-saikindo-secondary-600">
@@ -25,7 +34,10 @@ export default function HomeContact() {
             </Link>
             , fill out the form below, or get in touch with us through WhatsApp.
           </p>
-          <div className="flex flex-col lg:flex-row gap-2 mt-8">
+          <motion.div
+            animate={{ scaleX: isInView ? 1 : 0, opacity: isInView ? 1 : 0, transition: { duration: 0.3 } }}
+            className="flex flex-col lg:flex-row gap-2 mt-8"
+          >
             <div className="flex-1">
               <form className="border rounded-lg p-4 space-y-3 h-full bg-white/70">
                 <div className="flex flex-col sm:flex-row gap-3">
@@ -68,7 +80,7 @@ export default function HomeContact() {
                 ></iframe>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

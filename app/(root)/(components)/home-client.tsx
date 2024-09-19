@@ -2,7 +2,8 @@
 
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { H2 } from "@/components/wrapper";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const clientList = [
   { iconPath: "/images/clients/client-1.png", label: "" },
@@ -24,22 +25,30 @@ const clientList = [
 ];
 
 export function HomeClient() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref);
+
   return (
-    <section className="py-16 bg-gray-50">
+    <section ref={ref} className="py-16 bg-gray-50">
       <div className="container">
-        <H2 title="Our Clients" />
+        <motion.div animate={{ x: isInView ? 0 : -200, transition: { duration: 0.5 } }}>
+          <H2 title="Our Clients" />
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
           className="bg-white p-6 rounded-xl shadow-md"
         >
-          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-8">
+          <motion.div
+            animate={{ scale: isInView ? 1 : 0.8, opacity: isInView ? 1 : 0, transition: { duration: 0.5 } }}
+            className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-8"
+          >
             {clientList.map((item, i) => (
               <Avatar key={i} className="rounded-none h-16 w-full">
                 <AvatarImage src={item.iconPath} className="object-contain object-center" />
               </Avatar>
             ))}
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

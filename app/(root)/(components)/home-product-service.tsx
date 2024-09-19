@@ -3,8 +3,8 @@
 import { H2 } from "@/components/wrapper";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { inView, motion, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { FaArrowRightLong, FaPlay } from "react-icons/fa6";
 
@@ -36,18 +36,24 @@ const productServiceList = [
 ];
 
 export default function HomeProductService() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref);
+
   return (
-    <section id="product-service" className="py-16">
+    <section ref={ref} id="product-service" className="py-16">
       <div className="container">
-        <H2 title="Products & Services" />
+        <motion.div animate={{ x: isInView ? 0 : -200, transition: { duration: 0.5 } }}>
+          <H2 title="Products & Services" />
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
           className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-8"
         >
           {productServiceList.map((item, i) => (
-            <div
+            <motion.div
               key={i}
+              animate={{ y: isInView ? 0 : -100, opacity: isInView ? 1 : 0, transition: { duration: 0.3 * i } }}
               className="relative overflow-hidden flex flex-col items-center mt-4 xl:mt-0 p-4 shadow xl:shadow-none rounded-xl"
             >
               <Image
@@ -78,7 +84,7 @@ export default function HomeProductService() {
                   Watch Video
                 </Button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>
