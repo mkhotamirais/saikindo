@@ -9,18 +9,19 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import { FaBars, FaWhatsapp, FaXmark } from "react-icons/fa6";
-import { ContactSales, Logo } from "./header";
+import { FaBars, FaWhatsapp } from "react-icons/fa6";
+import { Logo } from "./header";
 import Link from "next/link";
 import { navbarMenu } from "./desktop-nav";
 import { Button } from "../ui/button";
+import { Menu } from "lucide-react";
 
 export default function MobileNav() {
   return (
     <Sheet>
       <SheetTrigger asChild className="md:hidden flex items-center justify-center cursor-pointer">
         <div className={`transition text-saikindo-secondary-600`}>
-          <FaBars size={24} />
+          <Menu size={30} />
         </div>
       </SheetTrigger>
       <SheetContent className="bg-saikindo-primary-600 border-none">

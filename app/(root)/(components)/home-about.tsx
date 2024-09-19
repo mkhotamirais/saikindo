@@ -9,9 +9,9 @@ import { Button } from "@/components/ui/button";
 
 export function HomeAbout() {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col">
+    <section className="py-16 lg:py-20 bg-gray-50">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-16">
+        <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} className="order-2 flex flex-col">
           <H2 className="text-center lg:text-left" title="About Us" />
           <Image
             src="/images/building-1.jpg"
@@ -20,7 +20,7 @@ export function HomeAbout() {
             alt="building"
             className="object-cover object-center rounded-lg block lg:hidden w-full h-72"
           />
-          <div className="flex-1 leading-relaxed space-y-4 py-6">
+          <div className="flex-1 leading-relaxed space-y-2 py-3">
             <p>
               PT. Saikindo Surya Gumiwang is a company that professional and reliable in the field of cleaning and
               building maintenance, power service, FTTH material supply, uniform, and event organizers.
@@ -50,7 +50,7 @@ export function HomeAbout() {
             width={500}
             height={500}
             alt="building"
-            className="rounded-lg hidden lg:block"
+            className="order-1 object-cover object-center rounded-lg hidden lg:block h-full"
           />
         </motion.div>
       </div>

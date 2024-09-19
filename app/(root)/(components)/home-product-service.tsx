@@ -37,7 +37,7 @@ const productServiceList = [
 
 export default function HomeProductService() {
   return (
-    <section id="product-service" className="py-16 scroll-mt-16">
+    <section id="product-service" className="py-16">
       <div className="container">
         <H2 title="Products & Services" />
         <motion.div

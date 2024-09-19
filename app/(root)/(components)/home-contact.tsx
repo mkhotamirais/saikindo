@@ -47,7 +47,7 @@ export default function HomeContact() {
                   <div key={i} className="mb-1">
                     <h3 className="font-josefin text-lg">{item.title}</h3>
                     <Button asChild variant={"link"} size={"sm"} className="px-0">
-                      <Link href="" className="flex items-center gap-2 text-saikindo-secondary-600">
+                      <Link href={item.href} className="flex items-center gap-2 text-saikindo-secondary-600">
                         <FaWhatsapp size={20} />
                         <p className="font-bold">{item.label}</p>
                       </Link>

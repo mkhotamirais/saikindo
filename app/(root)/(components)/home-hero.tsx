@@ -11,7 +11,7 @@ export function HomeHero() {
     <section className="relative">
       <div className="-z-10 left-10 top-5 absolute size-40 lg:size-64 rounded-full bg-saikindo-primary-100 blur-3xl" />
       <div className="-z-10 left-1/2 top-1/2 absolute size-40 lg:size-64 rounded-full bg-saikindo-primary-100 blur-3xl" />
-      <div className="container py-12 lg:py-24 text-center lg:text-left h-auto lg:h-[calc(100vh-8rem)] w-full grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-16">
+      <div className="container py-12 lg:py-20 text-center lg:text-left h-auto lg:h-[calc(100vh-12rem)] w-full grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-16">
         <div className="flex-1 flex flex-col h-fit lg:h-auto">
           <div className="grow leading-relaxed">
             <motion.h1

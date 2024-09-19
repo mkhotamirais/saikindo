@@ -22,7 +22,7 @@ html {
 
 /* swiper bullet active */
 .swiper-pagination-bullet-active {
-  background-color: greenyellow !important;
+  background-color: #e6392f !important;
 }
 
 @layer base {
