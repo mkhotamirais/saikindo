@@ -39,6 +39,19 @@ export default function HomeProductService() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
 
+  const ref1 = useRef<HTMLDivElement>(null);
+  const ref2 = useRef<HTMLDivElement>(null);
+  const ref3 = useRef<HTMLDivElement>(null);
+  const ref4 = useRef<HTMLDivElement>(null);
+
+  const inView1 = useInView(ref1);
+  const inView2 = useInView(ref2);
+  const inView3 = useInView(ref3);
+  const inView4 = useInView(ref4);
+
+  const refs = [ref1, ref2, ref3, ref4];
+  const inViews = [inView1, inView2, inView3, inView4];
+
   return (
     <section ref={ref} id="product-service" className="py-16">
       <div className="container">
@@ -53,7 +66,14 @@ export default function HomeProductService() {
           {productServiceList.map((item, i) => (
             <motion.div
               key={i}
-              animate={{ y: isInView ? 0 : -100, opacity: isInView ? 1 : 0, transition: { duration: 0.3 * i } }}
+              ref={refs[i]}
+              // initial={{ opacity: 0, y: -200, scale: 0 }}
+              // animate={{ y: isInView ? 0 : -100, opacity: isInView ? 1 : 0, transition: { duration: 0.3 * i } }}
+              animate={
+                inViews[i]
+                  ? { opacity: 1, y: 0, scale: 1, transition: { duration: 0.3 } }
+                  : { opacity: 0, y: 100, scale: 0.8 }
+              }
               className="relative overflow-hidden flex flex-col items-center mt-4 xl:mt-0 p-4 shadow xl:shadow-none rounded-xl"
             >
               <Image

@@ -11,7 +11,7 @@ import { useRef } from "react";
 export function HomeAbout() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
-
+  
   return (
     <section ref={ref} className="py-16 lg:py-20 bg-gray-50">
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-16">
