@@ -6,13 +6,13 @@ export default function AboutPage() {
       <div className="container">
         <div className="bg-[url('/images/building-1.jpg')] bg-cover bg-center h-56 lg:h-72 w-full my-2 rounded-md">
           <div className="bg-gradient-to-t from-black/50 to-black/10 h-full flex items-center justify-center">
-            <h1 className="font-josefin text-4xl lg:text-6xl font-bold text-green-500 backdrop-blur rounded-xl p-3">
+            <h1 className="font-josefin text-4xl lg:text-6xl font-bold text-saikindo-secondary-600 backdrop-blur rounded-xl p-3">
               About Us
             </h1>
           </div>
         </div>
         <div className="max-w-3xl py-8 space-y-4">
-          <h2 className="text-green-600 font-josefin text-3xl font-bold">Introduction</h2>
+          <h2 className="text-saikindo-secondary-600 font-josefin text-3xl font-bold">Introduction</h2>
           <div className="space-y-3">
             <p>
               PT. Saikindo Surya Gumiwang is a company that professional and reliable in the field of cleaning and
@@ -39,7 +39,7 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="max-w-3xl py-8 space-y-4">
-          <h2 className="text-green-600 font-josefin text-3xl font-bold">Vision</h2>
+          <h2 className="text-saikindo-secondary-600 font-josefin text-3xl font-bold">Vision</h2>
           <div className="space-y-3">
             <p>
               To become a leading company in the field of services and provision that provides the best solutions for
@@ -48,7 +48,7 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="max-w-3xl py-8 space-y-4">
-          <h2 className="text-green-600 font-josefin text-3xl font-bold">Mision</h2>
+          <h2 className="text-saikindo-secondary-600 font-josefin text-3xl font-bold">Mision</h2>
           <div className="space-y-3">
             <p>
               Providing high quality services and innovative solutions to meet customer needs effectively and
