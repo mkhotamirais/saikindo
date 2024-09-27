@@ -49,15 +49,15 @@ export default function MobileNav() {
             {navbarMenu.map((item, i) => (
               <SheetClose asChild key={i}>
                 <Link
-                  onMouseEnter={() => setActiveHover(item?.title)}
+                  onMouseEnter={() => setActiveHover(item?.label)}
                   onMouseLeave={() => setActiveHover("")}
                   onClick={() => setActiveClick(item?.href.split("/")[1])}
                   href={item.href}
                   className="relative text-white py-3"
                 >
-                  <div className="px-3">{item.title}</div>
+                  <div className="px-3">{item.label}</div>
                   <AnimatePresence>
-                    {activeHover === item.title && (
+                    {activeHover === item.label && (
                       <motion.div
                         layoutId="activeHover"
                         initial={{ opacity: 0 }}
