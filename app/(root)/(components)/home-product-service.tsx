@@ -82,24 +82,20 @@ export default function HomeProductService() {
                 height={500}
                 className="size-40 object-cover object-center rounded-full shadow-lg"
                 alt="image saiki"
+                priority
               />
               <div className="transition p-4">
-                <h3 className="font-josefin font-semibold text-2xl text-center text-saikindo-secondary-600">
-                  {item.title}
-                </h3>
+                <h3 className="font-josefin font-semibold text-2xl text-center text-primary">{item.title}</h3>
               </div>
               <p className="text-center">{item.description}</p>
               <div className="flex gap-3 mt-3 flex-col justify-center items-center">
                 <Button variant={"link"} asChild>
-                  <Link href="/about" className="group text-saikindo-secondary-600 flex items-center max-w-fit mt-auto">
+                  <Link href="/about" className="group text-primary flex items-center max-w-fit mt-auto">
                     <div className="group-hover:underline">View More</div>
                     <FaArrowRightLong className="ml-2 group-hover:translate-x-2 transition" />
                   </Link>
                 </Button>
-                <Button
-                  size="sm"
-                  className="flex gap-2 rounded-full bg-saikindo-secondary-600 hover:bg-saikindo-secondary-500"
-                >
+                <Button size="sm" className="flex gap-2 bg-primary">
                   <FaPlay />
                   Watch Video
                 </Button>

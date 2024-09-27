@@ -24,6 +24,7 @@ export const ClientWrapper = ({ children }: { children: React.ReactNode }) => {
   const onClick = () => {
     if (nav) closeNav();
   };
+
   return (
     <main onClick={onClick} className="pt-16 grow">
       {children}
@@ -36,7 +37,7 @@ export function H2({ title, className = "text-center" }: { title: string; classN
     <motion.h2
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`font-josefin text-4xl lg:text-5xl font-medium text-saikindo-secondary-600 mb-4 ${className}`}
+      className={`font-josefin text-4xl lg:text-5xl font-medium text-primary mb-4 ${className}`}
     >
       {title}
     </motion.h2>

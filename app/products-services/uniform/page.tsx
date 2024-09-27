@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Container, H2 } from "@/components/wrapper";
-import { HomeClient } from "../(root)/(components)/home-client";
+import { HomeClient } from "../../(root)/(components)/home-client";
 import { Banner } from "@/components/banner";
 import Maintenence from "@/components/maintenence";
 import Image from "next/image";

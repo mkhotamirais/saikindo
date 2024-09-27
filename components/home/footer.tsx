@@ -1,13 +1,4 @@
-import {
-  FaEnvelope,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaMapLocation,
-  FaTwitter,
-  FaWhatsapp,
-  FaYoutube,
-} from "react-icons/fa6";
+import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa6";
 import { Logo } from "./header";
 import Link from "next/link";
 
@@ -72,8 +63,8 @@ const linksMenu = [
 
 export function Footer() {
   return (
-    <footer className="text-white font-ptsans">
-      <div className="bg-saikindo-primary-600">
+    <footer className="font-ptsans">
+      <div className="bg-muted">
         <div className="container mx-auto py-12 flex flex-col md:grid md:grid-cols-3 gap-8">
           <div className="col-span-1">
             <Logo />
@@ -83,7 +74,7 @@ export function Footer() {
                   key={i}
                   href={item.href}
                   title={item.title}
-                  className="text-sm hover:text-saikindo-secondary-200 transition flex items-center gap-2 max-w-fit"
+                  className="text-sm hover:text-primary transition flex items-center gap-2 max-w-fit"
                 >
                   {item?.icon && <item.icon size={16} className="min-w-max" />}
                   {item.label}
@@ -101,7 +92,7 @@ export function Footer() {
                       key={i}
                       href={menu.href}
                       title={menu.label}
-                      className="font-ptsans text-sm hover:text-saikindo-secondary-200 transition w-fit"
+                      className="font-ptsans text-sm hover:text-primary transition w-fit"
                     >
                       {menu.label}
                     </Link>
@@ -112,15 +103,11 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-saikindo-primary-800">
+      <div className="bg-background">
         <div className="container mx-auto py-6 flex flex-col sm:flex-row gap-4 justify-between items-center">
           <small className="min-w-max font-ptsans">
             Copyright &copy; {new Date().getFullYear()}{" "}
-            <a
-              title="homepage saikindosg"
-              href="/"
-              className="font-semibold text-saikindo-secondary-500 hover:underline"
-            >
+            <a title="homepage saikindosg" href="/" className="font-semibold text-primary hover:underline">
               PT Saikindo Surya Gumiwang
             </a>
           </small>
@@ -131,9 +118,9 @@ export function Footer() {
                   href={item.href}
                   key={i}
                   title={item.title}
-                  className="bg-saikindo-secondary-600 rounded-full p-2 hover:scale-110 transition"
+                  className="bg-primary rounded-full p-2 hover:scale-110 transition"
                 >
-                  <item.icon size={14} className="" />
+                  <item.icon size={14} className="text-zinc-900" />
                 </Link>
               ))}
             </div>

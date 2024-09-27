@@ -10,9 +10,9 @@ const config = {
       padding: {
         DEFAULT: "1rem", // Padding default untuk layar kecil
         sm: "2rem", // Padding untuk layar kecil (mobile)
-        lg: "4rem", // Padding untuk layar besar (desktop)
-        xl: "5rem", // Padding untuk layar sangat besar (monitor)
-        "2xl": "6rem", // Padding untuk layar 2XL
+        lg: "3rem", // Padding untuk layar besar (desktop)
+        xl: "4rem", // Padding untuk layar sangat besar (monitor)
+        "2xl": "5rem", // Padding untuk layar 2XL
       },
       screens: {
         sm: "100%", // Full width untuk layar kecil

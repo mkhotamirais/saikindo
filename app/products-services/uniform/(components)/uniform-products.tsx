@@ -23,10 +23,7 @@ export default function UniformProducts() {
         <H2 title="Our Uniforms" />
         <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-4">
           {updatedUniformList.map((item, i) => (
-            <div
-              key={i}
-              className="rounded shadow hover:shadow-lg shadow-saikindo-secondary-600 transition overflow-hidden"
-            >
+            <div key={i} className="rounded shadow hover:shadow-lg shadow-primary transition overflow-hidden">
               <Image src={item.href as string} alt="uniform" width={500} height={500} />
               <h3 className="font-josefin text-center p-2">{item.label}</h3>
             </div>

@@ -5,6 +5,7 @@ import { ClientWrapper } from "@/components/wrapper";
 import { Header } from "@/components/home/header";
 import { Footer } from "@/components/home/footer";
 import BackToTop from "@/components/back-to-top";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -66,10 +67,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} *:font-ptsans flex flex-col min-h-screen`}>
-        <Header />
-        <ClientWrapper>{children}</ClientWrapper>
-        <Footer />
-        <BackToTop />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Header />
+          <ClientWrapper>{children}</ClientWrapper>
+          <Footer />
+          <BackToTop />
+        </ThemeProvider>
       </body>
     </html>
   );

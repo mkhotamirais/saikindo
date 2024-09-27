@@ -16,7 +16,7 @@ export function Header() {
     <motion.header
       initial={{ y: 0 }}
       animate={{ y: scrollDirection === "up" ? -100 : 0, transition: { duration: 0.3 } }}
-      className={`z-50 h-16 fixed top-0 left-0 right-0 w-full bg-saikindo-primary-700`}
+      className={`z-50 h-16 fixed top-0 left-0 right-0 w-full bg-background/80 backdrop-blur-sm`}
     >
       <div className="container mx-auto h-full flex items-center justify-between font-ptsans">
         <motion.div initial={{ opacity: 0, x: -150 }} animate={{ opacity: 1, x: 0 }}>
@@ -34,20 +34,19 @@ export function Header() {
 export function Logo() {
   return (
     <Link href="/" className="inline-block max-w-min">
-      <Avatar className="rounded-none w-20">
-        <AvatarImage src="/logo.png" alt="saiki logo" className="object-contain object-center" />
-      </Avatar>
+      <div className="flex gap-2 items-center">
+        <Avatar className="rounded-none w-20">
+          <AvatarImage src="/ssg-logo-edit.png" alt="saiki logo" className="object-contain object-center" />
+        </Avatar>
+        {/* <h1 className="text-primary font-josefin text">Saikindo</h1> */}
+      </div>
     </Link>
   );
 }
 
 export function ContactSales({ className }: { className?: string }) {
   return (
-    <Button
-      size={"sm"}
-      asChild
-      className={`${className} bg-saikindo-secondary-600 rounded-full hover:bg-saikindo-secondary-500 gap-2`}
-    >
+    <Button asChild className={`${className} gap-2`}>
       <Link href="/#contact-us" title="Contact Us" className="flex items-center gap-2">
         <FaWhatsapp size={22} />
         Contact Us

@@ -29,7 +29,7 @@ export default function HomeContact() {
           </motion.div>
           <p className="text-center text-white">
             You can contact us directly via email at{" "}
-            <Link href="mailto:office.saikindosg@gmail.com" className="text-saikindo-secondary-600">
+            <Link href="mailto:office.saikindosg@gmail.com" className="text-primary">
               office.saikindosg@gmail.com
             </Link>
             , fill out the form below, or get in touch with us through WhatsApp.
@@ -46,7 +46,7 @@ export default function HomeContact() {
                 </div>
                 <Input type="text" placeholder="Subject" />
                 <Textarea placeholder="Message" />
-                <Button type="submit" className="bg-saikindo-secondary-600 hover:bg-saikindo-secondary-500">
+                <Button type="submit" className="bg-primary">
                   <FaPaperPlane className="mr-2" />
                   Submit
                 </Button>
@@ -59,7 +59,7 @@ export default function HomeContact() {
                   <div key={i} className="mb-1">
                     <h3 className="font-josefin text-lg">{item.title}</h3>
                     <Button asChild variant={"link"} size={"sm"} className="px-0">
-                      <Link href={item.href} className="flex items-center gap-2 text-saikindo-secondary-600">
+                      <Link href={item.href} className="flex items-center gap-2 text-primary-foreground">
                         <FaWhatsapp size={20} />
                         <p className="font-bold">{item.label}</p>
                       </Link>

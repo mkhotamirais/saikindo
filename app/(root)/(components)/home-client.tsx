@@ -29,7 +29,7 @@ export function HomeClient() {
   const isInView = useInView(ref);
 
   return (
-    <section ref={ref} className="py-16 bg-gray-50">
+    <section ref={ref} className="py-16 bg-secondary">
       <div className="container">
         <motion.div animate={{ x: isInView ? 0 : -200, transition: { duration: 0.5 } }}>
           <H2 title="Our Clients" />

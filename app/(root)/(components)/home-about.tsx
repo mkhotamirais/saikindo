@@ -11,9 +11,9 @@ import { useRef } from "react";
 export function HomeAbout() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
-  
+
   return (
-    <section ref={ref} className="py-16 lg:py-20 bg-gray-50">
+    <section ref={ref} className="py-16 lg:py-20 bg-secondary">
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-16">
         <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} className="order-2 flex flex-col">
           <motion.div animate={{ x: isInView ? 0 : -200, transition: { duration: 0.5 } }}>
@@ -27,7 +27,7 @@ export function HomeAbout() {
               alt="building"
               className="object-cover object-center rounded-lg block lg:hidden w-full h-72"
             />
-            <div className="flex-1 leading-relaxed space-y-2 py-3">
+            <div className="flex-1 leading-relaxed space-y-2 py-3 mb-4">
               <p>
                 PT. Saikindo Surya Gumiwang is a company that professional and reliable in the field of cleaning and
                 building maintenance, power service, FTTH material supply, uniform, and event organizers.
@@ -38,13 +38,13 @@ export function HomeAbout() {
                 organizers.
               </p>
             </div>
-            <div className="flex gap-3 items-center">
-              <Button className="flex gap-2 rounded-full bg-saikindo-secondary-600 hover:bg-saikindo-secondary-500">
+            <div className="flex gap-3 items-center mt-auto">
+              <Button className="flex gap-2 bg-primary">
                 <FaPlay />
                 Watch Video
               </Button>
               <Button variant={"link"} asChild>
-                <Link href="/about" className="group text-saikindo-secondary-600 flex items-center max-w-fit mt-auto">
+                <Link href="/about" className="group text-primary flex items-center max-w-fit mt-auto">
                   <div className="group-hover:underline">View More</div>
                   <FaArrowRightLong className="ml-2 group-hover:translate-x-2 transition" />
                 </Link>

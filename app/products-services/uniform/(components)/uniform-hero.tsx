@@ -15,18 +15,10 @@ export default function UniformHero() {
               comfort.
             </p>
             <div className="flex flex-col sm:flex-row gap-2 pt-4">
-              <Button
-                asChild
-                size={"lg"}
-                className="w-40 rounded-full bg-saikindo-secondary-600 hover:bg-saikindo-secondary-500"
-              >
+              <Button asChild size={"lg"} className="w-40 primary">
                 <Link href="#our-uniforms">Our Uniforms</Link>
               </Button>
-              <Button
-                size="lg"
-                variant={"outline"}
-                className="w-40 text-saikindo-secondary-600 hover:text-saikindo-secondary-500 bg-inherit hover:bg-inherit hover:border-saikindo-secondary-500 rounded-full border-saikindo-secondary-600"
-              >
+              <Button size="lg" variant={"outline"} className="w-40 bg-inherit hover:bg-inherit border-primary">
                 <FaPlay className="mr-2" />
                 Watch Video
               </Button>

@@ -20,7 +20,7 @@ export default function BackToTop() {
       asChild
       className={`${
         hasReachedThreshold ? "fixed" : "hidden"
-      } bottom-4 right-4 rounded-full transition-none bg-saikindo-secondary-600 hover:bg-saikindo-secondary-500 bg-opacity-70 backdrop-blur ${
+      } bottom-4 right-4 rounded-full transition-none bg-primary/50 backdrop-blur ${
         maxScrollReached ? "-translate-y-12" : ""
       } transition`}
     >
