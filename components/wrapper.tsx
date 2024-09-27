@@ -26,7 +26,7 @@ export const ClientWrapper = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <main onClick={onClick} className="pt-16 grow">
+    <main onClick={onClick} className="relative pt-16 grow">
       {children}
     </main>
   );

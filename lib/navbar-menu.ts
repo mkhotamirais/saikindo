@@ -5,10 +5,10 @@ export const navbarMenu = [
     href: "/products-services",
     label: "Products & Services",
     subMenu: [
-      { href: "/products-services/uniform", label: "Uniform" },
-      { href: "/products-services/power", label: "Power" },
-      { href: "/products-services/event-organizer", label: "Event Organizer" },
-      { href: "/products-services/health", label: "Health" },
+      { href: "/products-services/uniform", label: "Saikindo Uniform" },
+      { href: "/products-services/power", label: "Saikindo Power" },
+      { href: "/products-services/event-organizer", label: "Saikindo Event Organizer" },
+      { href: "/products-services/health", label: "Saikindo Health" },
     ],
   },
 ];

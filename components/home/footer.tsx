@@ -30,33 +30,33 @@ const linksMenu = [
   {
     title: "Uniform",
     menus: [
-      { href: "", label: "Portfolio" },
-      { href: "", label: "Our Client" },
-      { href: "", label: "Info Lainnya" },
+      { href: "/products-services/uniform", label: "Portfolio" },
+      { href: "/products-services/uniform", label: "Our Client" },
+      { href: "/products-services/uniform", label: "Info Lainnya" },
     ],
   },
   {
     title: "Power",
     menus: [
-      { href: "", label: "Maintenence" },
-      { href: "", label: "General Supply" },
-      { href: "", label: "Fiber Optic and Telecommunication" },
+      { href: "/products-services/power", label: "Maintenence" },
+      { href: "/products-services/power", label: "General Supply" },
+      { href: "/products-services/power", label: "Fiber Optic and Telecommunication" },
     ],
   },
   {
     title: "Event Organizer",
     menus: [
-      { href: "", label: "Booth Production" },
-      { href: "", label: "Backdrop" },
-      { href: "", label: "Outbond" },
-      { href: "", label: "Gathering" },
+      { href: "/products-services/event-organizer", label: "Booth Production" },
+      { href: "/products-services/event-organizer", label: "Backdrop" },
+      { href: "/products-services/event-organizer", label: "Outbond" },
+      { href: "/products-services/event-organizer", label: "Gathering" },
     ],
   },
   {
     title: "Health",
     menus: [
-      { href: "", label: "Equipment" },
-      { href: "", label: "Supply" },
+      { href: "/products-services/health", label: "Equipment" },
+      { href: "/products-services/health", label: "Supply" },
     ],
   },
 ];

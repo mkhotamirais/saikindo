@@ -10,25 +10,25 @@ import { FaArrowRightLong, FaPlay } from "react-icons/fa6";
 
 const productServiceList = [
   {
-    href: "/uniform",
+    href: "/products-services/uniform",
     title: "Uniform",
     image: "/images/uniform2.png",
     description: "Providing high-quality, custom-made uniforms for various industries and organizations.",
   },
   {
-    href: "/power",
+    href: "/products-services/power",
     title: "Power",
     image: "/images/saiki-tower-1.png",
     description: "Empowering your business with innovative energy solutions for a sustainable future.",
   },
   {
-    href: "/event-organizer",
+    href: "/products-services/event-organizer",
     title: "Event Organizer",
     image: "/images/saiki-event-2.png",
     description: "Expert event planning services to ensure your events are memorable and successful.",
   },
   {
-    href: "/health",
+    href: "/products-services/health",
     title: "Health",
     image: "/images/saiki-porto-3.png",
     description: "Comprehensive health solutions designed to improve well-being and promote a healthy lifestyle.",
@@ -90,7 +90,7 @@ export default function HomeProductService() {
               <p className="text-center">{item.description}</p>
               <div className="flex gap-3 mt-3 flex-col justify-center items-center">
                 <Button variant={"link"} asChild>
-                  <Link href="/about" className="group text-primary flex items-center max-w-fit mt-auto">
+                  <Link href={item.href} className="group text-primary flex items-center max-w-fit mt-auto">
                     <div className="group-hover:underline">View More</div>
                     <FaArrowRightLong className="ml-2 group-hover:translate-x-2 transition" />
                   </Link>

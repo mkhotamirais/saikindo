@@ -9,7 +9,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import { FaWhatsapp } from "react-icons/fa6";
+import { FaMinus, FaPlus, FaWhatsapp } from "react-icons/fa6";
 import { Logo } from "./header";
 import Link from "next/link";
 import { Button } from "../ui/button";
@@ -22,13 +22,21 @@ import { navbarMenu } from "@/lib/navbar-menu";
 
 export default function MobileNav() {
   const pathname = usePathname();
-  const [activeHover, setActiveHover] = useState<string | null>(null);
   const [activeClick, setActiveClick] = useState<string | null>(null);
+  const [activeClickChild, setActiveClickChild] = useState<string | null>(null);
+  const [expanded, setExpanded] = useState<number | null>(null);
+
+  const toggleAction = (index: number) => {
+    setExpanded(expanded === index ? null : index);
+  };
 
   const path1 = pathname.split("/")[1];
+  const path2 = pathname.split("/")[2];
+
   useEffect(() => {
     setActiveClick(path1);
-  }, [path1]);
+    setActiveClickChild(path2);
+  }, [path1, path2]);
 
   return (
     <div className="md:hidden flex">
@@ -38,44 +46,67 @@ export default function MobileNav() {
             <Menu size={30} />
           </div>
         </SheetTrigger>
-        <SheetContent className="bg-saikindo-primary-600/50 border-none">
+        <SheetContent className="bg-primary/25 border-none">
           <SheetHeader className="text-left relative">
             <SheetTitle>
               <Logo />
             </SheetTitle>
             <SheetDescription className="hidden">Nav Description</SheetDescription>
           </SheetHeader>
-          <div className="flex flex-col text-sm mt-6">
+          <div className="flex flex-col text-sm text-white mt-6">
             {navbarMenu.map((item, i) => (
-              <SheetClose asChild key={i}>
-                <Link
-                  onMouseEnter={() => setActiveHover(item?.label)}
-                  onMouseLeave={() => setActiveHover("")}
-                  onClick={() => setActiveClick(item?.href.split("/")[1])}
-                  href={item.href}
-                  className="relative text-white py-3"
+              <div key={i}>
+                <div
+                  className={`flex justify-between gap-1 text-sm border-b ${
+                    activeClick === item.href.split("/")[1] ? "text-primary" : ""
+                  }`}
                 >
-                  <div className="px-3">{item.label}</div>
+                  <SheetClose asChild>
+                    <Link href={item.href} className="py-3 w-full">
+                      {item.label}
+                    </Link>
+                  </SheetClose>
+                  {item.subMenu && (
+                    <motion.div
+                      initial={{ rotate: 0 }}
+                      animate={{ rotate: expanded === i ? 180 : 0 }}
+                      transition={{ duration: 0.2 }}
+                      onClick={() => toggleAction(i)}
+                      className="flex items-center justify-center w-12"
+                    >
+                      {expanded === i ? <FaMinus /> : <FaPlus />}
+                    </motion.div>
+                  )}
+                </div>
+                {item?.subMenu && (
                   <AnimatePresence>
-                    {activeHover === item.label && (
+                    {expanded === i && (
                       <motion.div
-                        layoutId="activeHover"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="-z-10 absolute inset-0 bg-primary/25 rounded"
-                      />
+                        className="overflow-hidden"
+                      >
+                        {item?.subMenu?.map((itm, idx) => (
+                          <div key={idx}>
+                            <SheetClose asChild>
+                              <Link
+                                href={itm.href}
+                                className={`py-2 block pl-2 ${
+                                  activeClickChild === itm.href.split("/")[2] ? "text-primary" : ""
+                                }`}
+                              >
+                                {itm.label}
+                              </Link>
+                            </SheetClose>
+                          </div>
+                        ))}
+                      </motion.div>
                     )}
                   </AnimatePresence>
-                  {activeClick === item.href.split("/")[1] && (
-                    <motion.div
-                      layoutId="activeClick"
-                      className="absolute h-0.5 left-0 right-0 bg-primary rounded-full bottom-0"
-                    />
-                  )}
-                </Link>
-              </SheetClose>
+                )}
+              </div>
             ))}
           </div>
           <div className="absolute right-0 p-4 bottom-0 flex justify-between w-full gap-2">

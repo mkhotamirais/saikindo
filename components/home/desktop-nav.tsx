@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ModeToggle } from "../theme/mode-toggle";
 import { navbarMenu } from "@/lib/navbar-menu";
+import { ChevronDown } from "lucide-react";
 
 export function DesktopNav() {
   const [activeHover, setActiveHover] = useState<string | null>(null);
@@ -33,15 +34,8 @@ export function DesktopNav() {
               onMouseEnter={() => setActiveHover(item.label)}
               onMouseLeave={() => setActiveHover(null)}
               key={i}
-              className="relative group"
+              className="relative"
             >
-              <Link
-                onClick={() => setActiveClick(item.href.split("/")[1])}
-                href={item.href}
-                className="z-50 px-4 py-2 block"
-              >
-                {item.label}
-              </Link>
               {activeClick === item.href.split("/")[1] && (
                 <motion.div layoutId="activeClick" className="h-0.5 w-full bottom-0.5 absolute bg-primary" />
               )}
@@ -53,43 +47,61 @@ export function DesktopNav() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.2 }}
                     layoutId="activeHover"
-                    className="-z-10 absolute bg-primary/10 inset-0 inset-y-1 rounded-md"
+                    className="-z-50 absolute bg-primary/10 inset-0 inset-y-1 rounded-md"
                   />
                 )}
               </AnimatePresence>
-              {item?.subMenu && (
-                <div className="p-2 absolute -z-10 translate-y-10 group-hover:translate-y-0 group-hover:z-50 opacity-0 group-hover:opacity-100 bg-background border rounded-md transition">
-                  <div className="flex flex-col">
-                    {item?.subMenu?.map((itm, idx) => (
-                      <div
-                        key={idx}
-                        onMouseEnter={() => setActiveHoverChild(itm.label)}
-                        onMouseLeave={() => setActiveHoverChild(null)}
-                        className="relative"
-                      >
-                        <Link href={itm.href} className="relative min-w-max block py-2 px-4">
-                          {itm.label}
-                        </Link>
-                        {activeClickChild === itm.href.split("/")[2] && (
-                          <motion.div layoutId="activeClick" className="h-0.5 w-full bottom-0.5 absolute bg-primary" />
-                        )}
-                        <AnimatePresence>
-                          {activeHoverChild === itm.label && (
-                            <motion.div
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              exit={{ opacity: 0 }}
-                              transition={{ duration: 0.2 }}
-                              layoutId="activeHoverChild"
-                              className="-z-10 absolute bg-primary/10 inset-0 inset-y-1 rounded-md"
-                            />
-                          )}
-                        </AnimatePresence>
+              <div className="flex relative items-center px-4">
+                <Link
+                  onClick={() => setActiveClick(item.href.split("/")[1])}
+                  href={item.href}
+                  className="z-0 py-2 block"
+                >
+                  {item.label}
+                </Link>
+                {item?.subMenu && (
+                  <div className="group p-2 pr-0">
+                    <div className="group-hover:rotate-180 transition">
+                      <ChevronDown className="size-4" />
+                    </div>
+                    <div className="p-2 absolute top-full w-max left-0 translate-y-5 group-hover:-translate-y-0.5 opacity-0 group-hover:opacity-100 bg-background border rounded-md transition">
+                      <div className="flex flex-col">
+                        {item?.subMenu?.map((itm, idx) => (
+                          <div
+                            key={idx}
+                            onMouseEnter={() => setActiveHoverChild(itm.label)}
+                            onMouseLeave={() => setActiveHoverChild(null)}
+                            className="relative flex flex-col items-start"
+                          >
+                            <Link href={itm.href} className="relative py-2 px-4">
+                              {itm.label}
+                            </Link>
+
+                            {activeClickChild === itm.href.split("/")[2] && (
+                              <motion.div
+                                layoutId="activeClick"
+                                className="h-0.5 w-full bottom-0.5 absolute bg-primary"
+                              />
+                            )}
+                            <AnimatePresence>
+                              {activeHoverChild === itm.label && (
+                                <motion.div
+                                  initial={{ opacity: 0 }}
+                                  animate={{ opacity: 1 }}
+                                  exit={{ opacity: 0 }}
+                                  transition={{ duration: 0.2 }}
+                                  layoutId="activeHoverChild"
+                                  className="-z-10 absolute bg-primary/10 inset-0 inset-y-1 rounded-md"
+                                />
+                              )}
+                            </AnimatePresence>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           ))}
         </div>
