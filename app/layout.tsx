@@ -65,6 +65,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="keywords"
+          content="saikindo, saikindosg, ssg, saikindo surya gumiwang, surya gumiwang, saikindo uniform, saikindo health, saikindo event, saikindo cleaning, saikindo maintenance, saikindo FTTH, saikindo power, saikindo quality, saikindo sustainable, saikindo service"
+        />
       </head>
       <body className={`${inter.className} *:font-ptsans flex flex-col min-h-screen`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
