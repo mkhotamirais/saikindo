@@ -59,7 +59,7 @@ export function HomeServices() {
     <section className="py-6">
       <div className="container">
         <div className="bg-white p-3 rounded shadow">
-          <H2 className="" title={"Services"} />
+          {/* <H2 className="" title={"Services"} /> */}
           <Separator />
           <div className="py-3 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
             {serviceList.map((item, i) => (

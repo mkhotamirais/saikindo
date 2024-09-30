@@ -17,7 +17,7 @@ export function HomeAbout() {
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-16">
         <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} className="order-2 flex flex-col">
           <motion.div animate={{ x: isInView ? 0 : -200, transition: { duration: 0.5 } }}>
-            <H2 className="text-center lg:text-left" title="About Us" />
+            <H2 className="text-center lg:text-left">About Us</H2>
           </motion.div>
           <motion.div animate={{ y: isInView ? 0 : -100, opacity: isInView ? 1 : 0, transition: { duration: 0.5 } }}>
             <Image

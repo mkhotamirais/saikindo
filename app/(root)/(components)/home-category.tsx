@@ -18,7 +18,7 @@ export default function HomeCategory() {
     <section className="py-6">
       <Container>
         <div className="bg-white rounded shadow">
-          <H2 title="Categories" />
+          {/* <H2 title="Categories" /> */}
           <Separator />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:grid-cols-5 p-4">
             {categoryList.map((item, i) => (

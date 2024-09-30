@@ -25,7 +25,7 @@ export default function HomeContact() {
       <div className="bg-black/70 py-16">
         <div className="container">
           <motion.div animate={{ x: isInView ? 0 : -200, transition: { duration: 0.3 } }}>
-            <H2 title="Contact Us" />
+            <H2>Contact Us</H2>
           </motion.div>
           <p className="text-center text-white">
             You can contact us directly via email at{" "}

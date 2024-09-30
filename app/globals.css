@@ -30,6 +30,24 @@ html {
   color: hsl(var(--primary)) !important;
 }
 
+/* category uniform hero */
+#category-uniform::-webkit-scrollbar {
+  @apply rounded-full overflow-hidden w-2 pl-2;
+}
+
+#category-uniform::-webkit-scrollbar-track {
+  @apply bg-secondary rounded-full;
+}
+
+#category-uniform::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full ml-2 pl-2;
+}
+
+/* bg primary grad */
+.bg-primary-grad {
+  @apply bg-gradient-to-tr from-primary via-primary/50 to-primary;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

@@ -29,7 +29,7 @@ export function HomeProfessionalism() {
     <section className="py-6">
       <Container>
         <div className="p-3 bg-white">
-          <H2 className="" title={"Professionalism And Success"} />
+          <H2>Professionalism And Success</H2>
           <Separator />
           <div className="py-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
             {ProfessionalismList.map((item, i) => (

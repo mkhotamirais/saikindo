@@ -32,14 +32,14 @@ export const ClientWrapper = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export function H2({ title, className = "text-center" }: { title: string; className?: string }) {
+export function H2({ children, className = "text-center" }: { children: React.ReactNode; className?: string }) {
   return (
     <motion.h2
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`font-josefin text-4xl lg:text-5xl font-medium text-primary mb-4 ${className}`}
+      className={`font-josefin capitalize text-3xl lg:text-5xl font-medium text-primary mb-4 ${className}`}
     >
-      {title}
+      {children}
     </motion.h2>
   );
 }

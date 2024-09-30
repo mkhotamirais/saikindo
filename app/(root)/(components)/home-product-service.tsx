@@ -11,25 +11,25 @@ import { FaArrowRightLong, FaPlay } from "react-icons/fa6";
 const productServiceList = [
   {
     href: "/products-services/uniform",
-    title: "Uniform",
+    title: "Saikindo Uniform",
     image: "/images/uniform2.png",
     description: "Providing high-quality, custom-made uniforms for various industries and organizations.",
   },
   {
     href: "/products-services/power",
-    title: "Power",
+    title: "Saikindo Power",
     image: "/images/saiki-tower-1.png",
     description: "Empowering your business with innovative energy solutions for a sustainable future.",
   },
   {
     href: "/products-services/event-organizer",
-    title: "Event Organizer",
+    title: "Saikindo Event",
     image: "/images/saiki-event-2.png",
     description: "Expert event planning services to ensure your events are memorable and successful.",
   },
   {
     href: "/products-services/health",
-    title: "Health",
+    title: "Saikindo Health",
     image: "/images/saiki-porto-3.png",
     description: "Comprehensive health solutions designed to improve well-being and promote a healthy lifestyle.",
   },
@@ -56,7 +56,7 @@ export default function HomeProductService() {
     <section ref={ref} id="product-service" className="py-16">
       <div className="container">
         <motion.div animate={{ x: isInView ? 0 : -200, transition: { duration: 0.5 } }}>
-          <H2 title="Products & Services" />
+          <H2>Products & Services</H2>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 100 }}

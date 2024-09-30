@@ -32,7 +32,7 @@ export function HomeClient() {
     <section ref={ref} className="py-16 bg-secondary">
       <div className="container">
         <motion.div animate={{ x: isInView ? 0 : -200, transition: { duration: 0.5 } }}>
-          <H2 title="Our Clients" />
+          <H2>Our Clients</H2>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 100 }}
