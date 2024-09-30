@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://saikindo.co.id
+
+# Sitemaps
+Sitemap: https://saikindo.co.id/sitemap.xml
