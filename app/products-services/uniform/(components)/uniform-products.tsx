@@ -12,7 +12,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const DATA_PER_PAGE = 12;
 
@@ -71,7 +71,12 @@ export default function UniformProducts() {
             <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-4">
               {data.map((item, i) => (
                 <div key={i} className="rounded shadow hover:shadow-lg shadow-primary transition overflow-hidden">
-                  <Image src={item.href as string} alt="uniform" width={500} height={500} />
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1, transition: { delay: 0.2 } }}
+                  >
+                    <Image src={item.href as string} alt="uniform" width={500} height={500} />
+                  </motion.div>
                   <h3 className="font-josefin text-center p-2">{item.label}</h3>
                 </div>
               ))}
