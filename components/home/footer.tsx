@@ -92,7 +92,7 @@ export function Footer() {
                       key={i}
                       href={menu.href}
                       title={menu.label}
-                      className="font-ptsans text-sm hover:text-primary transition w-fit"
+                      className="font-ptsans text-sm hover:text-primary transition w-fit text-muted-foreground"
                     >
                       {menu.label}
                     </Link>

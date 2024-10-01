@@ -1,37 +1,37 @@
 export const uniformList = [
   {
     href: "https://drive.google.com/file/d/1mnzWiZCyykJsWXuswW8l56XK3kTlCn-C/view?usp=drive_link",
-    label: "Wear Pack 7",
+    label: "Wearpack 7",
     cat: "wearpack",
   },
   {
     href: "https://drive.google.com/file/d/1shGDklrKMvdRfZRXvD51HRT8IRLaqEoM/view?usp=drive_link",
-    label: "Wear Pack 6",
+    label: "Wearpack 6",
     cat: "wearpack",
   },
   {
     href: "https://drive.google.com/file/d/1GMkevrh9YJRz-sUAOVxoUwT_Y0ghSfOI/view?usp=drive_link",
-    label: "Wear Pack 5",
+    label: "Wearpack 5",
     cat: "wearpack",
   },
   {
     href: "https://drive.google.com/file/d/1BNrhDKLmbzycecZWJfIgMiakTwYK_UK_/view?usp=drive_link",
-    label: "Wear Pack 4",
+    label: "Wearpack 4",
     cat: "wearpack",
   },
   {
     href: "https://drive.google.com/file/d/1UGTAEcTqS2KCTx6fkAaBWFP4r7wkKKe2/view?usp=drive_link",
-    label: "Wear Pack 3",
+    label: "Wearpack 3",
     cat: "wearpack",
   },
   {
     href: "https://drive.google.com/file/d/1F9hR7ZYlTO1TBIh85e5E1oKlstRDL9kD/view?usp=drive_link",
-    label: "Wear Pack 2",
+    label: "Wearpack 2",
     cat: "wearpack",
   },
   {
     href: "https://drive.google.com/file/d/1hPu1o0COQ_nLUSb8mg7mGuJG4YA7vhQY/view?usp=drive_link",
-    label: "Wear Pack 1",
+    label: "Wearpack 1",
     cat: "wearpack",
   },
   {

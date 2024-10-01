@@ -13,12 +13,12 @@ export default function UniformHero() {
   const { cat, setCat, setCurrentPage } = useUniform();
 
   return (
-    <section className="bg-[url('/images/pix-uniform.jpg')] bg-cover bg-center -translate-y-10">
+    <section className="bg-[url('/images/pix-uniform.jpg')] bg-cover bg-center -translate-y-16 text-white">
       <div className="bg-gradient-to-t from-black/50 to-black/50">
-        <div className="container min-h-[calc(100vh-8rem)] py-24 md:py-32">
+        <div className="container min-h-[calc(100vh-6rem)] py-24 md:py-32">
           <div className="flex flex-col md:flex-row item-center gap-12 h-auto sm:h-72 justify-center">
             <div className="flex-1 flex flex-col justify-between">
-              <h1 className="text-4xl font-bold font-josefin leading-snug">
+              <h1 className="text-4xl font-bold font-josefin leading-snug ">
                 Find the Perfect Uniform for Style and Function
               </h1>
               <p className="leading-relaxed">
@@ -56,8 +56,8 @@ export default function UniformHero() {
                       type="button"
                       key={i}
                       className={`rounded ${
-                        cat === item ? "bg-primary-grad" : ""
-                      } capitalize text-lg p-2 px-4 rounded-full w-full sm:w-64 mx-auto hover:text-black hover:bg-primary text-ptsans transition border border-primary`}
+                        cat === item ? "bg-gradient-to-tr from-primary via-primary/50 to-primary" : ""
+                      } capitalize text-lg p-2 px-4 rounded-full w-full sm:w-64 mx-auto hover:bg-gradient-to-tr from-primary via-primary/50 to-primary text-ptsans transition border border-primary`}
                     >
                       {item}
                     </button>
