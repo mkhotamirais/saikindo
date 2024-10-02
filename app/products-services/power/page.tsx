@@ -1,6 +1,9 @@
-import { Banner } from "@/components/banner";
 import Maintenence from "@/components/maintenence";
-import { Container, H2 } from "@/components/wrapper";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Saikindo Power",
+};
 
 export default function PowerPage() {
   return (
