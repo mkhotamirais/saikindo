@@ -85,8 +85,8 @@ export default function UniformProducts() {
             </div>
             {updatedUniformList.length > DATA_PER_PAGE && (
               <div className="mt-12">
-                <Pagination>
-                  <PaginationContent>
+                <Pagination className="">
+                  <PaginationContent className="flex-wrap justify-center">
                     <PaginationItem>
                       <PaginationPrevious
                         href="#"
