@@ -8,7 +8,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { CustomAuthor } from "./types";
 
 export const metadata: Metadata = {
-  // title: "PT. Saikindo Surya Gumiwang - Uniform, Power, Event Organizer, and Health Services in Bogor",
+  metadataBase: new URL("https://saikindo.co.id"),
   title: {
     absolute: "PT. Saikindo Surya Gumiwang - Uniform, Power, Event Organizer, and Health Services in Bogor", // menimpa semua value yang lain
     default: "PT. Saikindo Surya Gumiwang", // default untuk page ini dan childnya
@@ -94,7 +94,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`*:font-ptsans flex flex-col min-h-screen`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Header />
           <ClientWrapper>{children}</ClientWrapper>
           <Footer />

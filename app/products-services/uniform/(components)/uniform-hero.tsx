@@ -9,7 +9,7 @@ import { FaPlay } from "react-icons/fa6";
 
 export default function UniformHero() {
   const cats = Array.from(new Set(uniformList.map((item) => item.cat)));
-  const allCats = [...cats, "restauran", "polo kaos", "hotel", "almamater & blazer", "perawat"];
+  // const allCats = [...cats, "restauran", "polo kaos", "hotel", "almamater & blazer", "perawat"];
   const { cat, setCat, setCurrentPage } = useUniform();
 
   return (
@@ -40,14 +40,14 @@ export default function UniformHero() {
             <div className="flex-1 border rounded-xl p-6 bg-black/50">
               <div className="">
                 <h3 className="text-3xl pb-2 font-josefin text-center border-b border-primary">
-                  Here are our <span className="text-primary">{allCats.length} uniform</span> categories
+                  Here are our <span className="text-primary">{cats.length} uniform</span> categories
                 </h3>
 
                 <div
                   id="category-uniform"
                   className="flex flex-col gap-2 h-56 sm:h-40 xl:h-48 w-full overflow-y-scroll pt-2"
                 >
-                  {allCats.map((item, i) => (
+                  {cats.map((item, i) => (
                     <button
                       onClick={() => {
                         setCat(item);
