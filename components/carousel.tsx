@@ -51,7 +51,7 @@ export default function Carousel({ carouselData }: { carouselData: CarouselProps
         </Button>
       </div>
       {/* dots */}
-      <div className="opacity-40 group-hover:opacity-100 transition absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
+      <div className="opacity-60 group-hover:opacity-100 transition absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
         {carouselData.map((item, i) => (
           <div
             title="dots"

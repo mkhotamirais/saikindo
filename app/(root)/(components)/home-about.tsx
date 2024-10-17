@@ -80,7 +80,7 @@ export function HomeAbout() {
 
 const LogoProfile = () => {
   return (
-    <div className="absolute top-0 left-0 flex gap-2 p-4">
+    <div className="absolute top-0 left-0 translate-x-1/2 flex gap-2 p-4">
       <Avatar>
         <AvatarImage src="/logos/ssg-logo-square.png" alt="saiki logo" className="object-center" />
       </Avatar>
