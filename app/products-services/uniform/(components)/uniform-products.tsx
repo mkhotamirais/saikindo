@@ -3,7 +3,6 @@
 import { H2 } from "@/components/wrapper";
 import { useUniform } from "@/hooks/use-uniform";
 import { uniformList } from "@/lib/uniform-list";
-import Image from "next/image";
 import {
   Pagination,
   PaginationContent,
@@ -13,21 +12,14 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { ImageWithSkeleton } from "./uniform-image-skeleton";
+import { transformUrlPath } from "@/lib/utils";
 
 const DATA_PER_PAGE = 10;
-
-const transformHref = (url: string) => {
-  const getUrl = new URL(url);
-  const getId = new URLSearchParams(getUrl.search);
-  const id = getId?.get("id");
-  if (id) return `https://drive.google.com/uc?export=view&id=${id}`;
-  return null;
-};
 
 const updatedUniformList = uniformList
   .map((item) => ({
     ...item,
-    href: transformHref(item.href),
+    href: transformUrlPath(item.href),
   }))
   .filter((item) => item.href);
 

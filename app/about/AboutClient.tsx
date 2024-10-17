@@ -6,12 +6,12 @@ export default function AboutClient() {
   return (
     <section>
       <div className="container">
-        <div className="bg-[url('/images/building-1.jpg')] bg-cover bg-center h-56 lg:h-72 w-full my-2 rounded-md">
-          <div className="bg-gradient-to-t from-black/50 to-black/10 h-full flex items-center justify-center">
+        <div className="bg-[url('/images/about.jpg')] bg-cover bg-center h-56 lg:h-72 w-full my-2 rounded-md">
+          <div className="bg-gradient-to-t from-black/50 to-black/10 h-full">
             <motion.h1
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
-              className="font-josefin text-4xl lg:text-6xl font-bold text-primary backdrop-blur rounded-xl p-3"
+              className="font-josefin text-4xl lg:text-6xl font-bold text-primary rounded-xl p-8"
             >
               About Us
             </motion.h1>

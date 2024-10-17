@@ -9,18 +9,8 @@ const config = {
       center: true,
       padding: {
         DEFAULT: "1rem", // Padding default untuk layar kecil
-        sm: "2rem", // Padding untuk layar kecil (mobile)
-        lg: "3rem", // Padding untuk layar besar (desktop)
         xl: "4rem", // Padding untuk layar sangat besar (monitor)
         "2xl": "5rem", // Padding untuk layar 2XL
-      },
-      screens: {
-        sm: "100%", // Full width untuk layar kecil
-        md: "728px", // Width yang pas untuk medium screen
-        lg: "1024px", // Width standar untuk layar besar
-        xl: "1280px", // Lebih besar lagi
-        "2xl": "1400px", // Sama seperti yang kamu sebutkan untuk 2XL
-        "3xl": "1600px", // Tambahkan satu ukuran layar ekstra besar
       },
     },
     extend: {

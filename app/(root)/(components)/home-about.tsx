@@ -7,6 +7,7 @@ import { motion, useInView } from "framer-motion";
 import { H2 } from "@/components/wrapper";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 export function HomeAbout() {
   const ref = useRef<HTMLDivElement>(null);
@@ -19,14 +20,20 @@ export function HomeAbout() {
           <motion.div animate={{ x: isInView ? 0 : -200, transition: { duration: 0.5 } }}>
             <H2 className="text-center lg:text-left">About Us</H2>
           </motion.div>
-          <motion.div animate={{ y: isInView ? 0 : -100, opacity: isInView ? 1 : 0, transition: { duration: 0.5 } }}>
-            <Image
-              src="/images/building-1.jpg"
-              width={500}
-              height={500}
-              alt="building"
-              className="object-cover object-center rounded-lg block lg:hidden w-full h-72"
-            />
+          <motion.div
+            className="relative"
+            animate={{ y: isInView ? 0 : -100, opacity: isInView ? 1 : 0, transition: { duration: 0.5 } }}
+          >
+            <div className="relative block lg:hidden">
+              <Image
+                src={"/images/about.jpg"}
+                width={500}
+                height={500}
+                alt="building"
+                className="object-cover object-center rounded-lg w-full h-72"
+              />
+              <LogoProfile />
+            </div>
             <div className="flex-1 leading-relaxed space-y-2 py-3 mb-4">
               <p>
                 PT. Saikindo Surya Gumiwang is a company that professional and reliable in the field of cleaning and
@@ -53,18 +60,39 @@ export function HomeAbout() {
           </motion.div>
         </motion.div>
         <motion.div
+          className="relative hidden lg:block"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0, scale: isInView ? 1 : 0.8, transition: { delay: 0.2 } }}
         >
           <Image
-            src="/images/building-1.jpg"
+            src={"/images/about.jpg"}
             width={500}
             height={500}
             alt="building"
-            className="order-1 object-cover object-center rounded-lg hidden lg:block h-full"
+            className="order-1 object-cover object-center rounded-lg h-full"
           />
+          <LogoProfile />
         </motion.div>
       </div>
     </section>
   );
 }
+
+const LogoProfile = () => {
+  return (
+    <div className="absolute top-0 left-0 flex gap-2 p-4">
+      <Avatar>
+        <AvatarImage src="/logos/ssg-logo-square.png" alt="saiki logo" className="object-center" />
+      </Avatar>
+      <Avatar>
+        <AvatarImage src="/logos/logo-saiki-uniform-fit.png" alt="saiki logo" className="object-center" />
+      </Avatar>
+      <Avatar>
+        <AvatarImage src="/logos/logo-saiki-event-fit.png" alt="saiki logo" className="object-center" />
+      </Avatar>
+      <Avatar>
+        <AvatarImage src="/logos/logo-saiki-power-fit.png" alt="saiki logo" className="object-center" />
+      </Avatar>
+    </div>
+  );
+};

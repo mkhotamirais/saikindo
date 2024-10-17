@@ -91,7 +91,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logos/ssg-logo-square-32.png" type="image/png" />
       </head>
       <body className={`*:font-ptsans flex flex-col min-h-screen`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>

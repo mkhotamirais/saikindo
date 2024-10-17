@@ -4,36 +4,10 @@ import { H2 } from "@/components/wrapper";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
-import { inView, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { FaArrowRightLong, FaPlay } from "react-icons/fa6";
-
-const productServiceList = [
-  {
-    href: "/products-services/uniform",
-    title: "Saikindo Uniform",
-    image: "/images/uniform2.png",
-    description: "Providing high-quality, custom-made uniforms for various industries and organizations.",
-  },
-  {
-    href: "/products-services/power",
-    title: "Saikindo Power",
-    image: "/images/saiki-tower-1.png",
-    description: "Empowering your business with innovative energy solutions for a sustainable future.",
-  },
-  {
-    href: "/products-services/event-organizer",
-    title: "Saikindo Event",
-    image: "/images/saiki-event-2.png",
-    description: "Expert event planning services to ensure your events are memorable and successful.",
-  },
-  {
-    href: "/products-services/health",
-    title: "Saikindo Health",
-    image: "/images/saiki-porto-3.png",
-    description: "Comprehensive health solutions designed to improve well-being and promote a healthy lifestyle.",
-  },
-];
+import { productServiceList } from "@/lib/product-service-list";
 
 export default function HomeProductService() {
   const ref = useRef<HTMLDivElement>(null);
@@ -61,7 +35,7 @@ export default function HomeProductService() {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
-          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8"
         >
           {productServiceList.map((item, i) => (
             <motion.div

@@ -26,12 +26,16 @@ export default function UniformHero() {
                 and comfort.
               </p>
               <div className="flex flex-col sm:flex-row gap-2 pt-4">
-                <Button asChild size={"lg"} className="w-40 primary">
+                <Button asChild size={"lg"} className="w-40 primary text-lg font-medium">
                   <Link href="#our-uniforms" onClick={() => setCat("")}>
                     Our Uniforms
                   </Link>
                 </Button>
-                <Button size="lg" variant={"outline"} className="w-40 bg-inherit hover:bg-inherit border-primary">
+                <Button
+                  size="lg"
+                  variant={"link"}
+                  className="bg-inherit text-lg font-medium hover:bg-inherit border-primary"
+                >
                   <FaPlay className="mr-2" />
                   Watch Video
                 </Button>

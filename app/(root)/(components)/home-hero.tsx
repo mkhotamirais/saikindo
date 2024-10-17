@@ -1,10 +1,19 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import HomeHeroImageSlider from "./home-hero-image-slider";
 import HomeHeroFlipText from "./home-hero-flip-text";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Carousel from "@/components/carousel";
+
+const carouselData = [
+  { label: "", description: "", image: "/images/carousel1.jpg" },
+  { label: "", description: "", image: "/images/carousel2.jpg" },
+  { label: "", description: "", image: "/images/carousel3.jpg" },
+  { label: "", description: "", image: "/images/carousel4.jpg" },
+  { label: "", description: "", image: "/images/carousel5.jpg" },
+  { label: "", description: "", image: "/images/carousel6.jpg" },
+];
 
 export function HomeHero() {
   return (
@@ -44,7 +53,7 @@ export function HomeHero() {
           animate={{ opacity: 1, x: 0, transition: { delay: 0.6 } }}
           className="flex-1 relative w-full h-80 lg:h-full"
         >
-          <HomeHeroImageSlider />
+          <Carousel carouselData={carouselData} />
         </motion.div>
       </div>
     </section>

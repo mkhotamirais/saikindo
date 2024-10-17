@@ -21,7 +21,7 @@ export default function HomeContact() {
   const isInView = useInView(ref);
 
   return (
-    <section ref={ref} id="contact-us" className="bg-[url('/images/building-1.jpg')] bg-cover bg-center bg-fixed">
+    <section ref={ref} id="contact-us" className="bg-[url('/images/about.jpg')] bg-cover bg-center bg-fixed">
       <div className="bg-black/70 py-16">
         <div className="container">
           <motion.div animate={{ x: isInView ? 0 : -200, transition: { duration: 0.3 } }}>

@@ -52,13 +52,13 @@ const linksMenu = [
       { href: "/products-services/event-organizer", label: "Gathering" },
     ],
   },
-  {
-    title: "Health",
-    menus: [
-      { href: "/products-services/health", label: "Equipment" },
-      { href: "/products-services/health", label: "Supply" },
-    ],
-  },
+  // {
+  //   title: "Health",
+  //   menus: [
+  //     { href: "/products-services/health", label: "Equipment" },
+  //     { href: "/products-services/health", label: "Supply" },
+  //   ],
+  // },
 ];
 
 export function Footer() {
@@ -82,7 +82,7 @@ export function Footer() {
               ))}
             </div>
           </div>
-          <div className="col-span-2 grid md:grid-cols-2 xl:grid-cols-4 gap-10 mt-8 sm:mt-0">
+          <div className="col-span-2 grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-8 sm:mt-0">
             {linksMenu.map((item, i) => (
               <div key={i} className="space-y-4">
                 <h4 className="text-lg font-bold font-josefin">{item.title}</h4>
