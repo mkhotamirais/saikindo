@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ClientWrapper } from "@/components/wrapper";
-import { Header } from "@/components/home/header";
-import { Footer } from "@/components/home/footer";
 import BackToTop from "@/components/back-to-top";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { CustomAuthor } from "./types";
+import { Header } from "@/components/home/Header";
+import { Footer } from "@/components/home/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://saikindo.co.id"),

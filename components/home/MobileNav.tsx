@@ -10,17 +10,16 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { FaMinus, FaPlus, FaWhatsapp } from "react-icons/fa6";
-import { Logo } from "./header";
 import Link from "next/link";
-import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ModeToggle } from "../theme/mode-toggle";
-import { navbarMenu } from "@/lib/navbar-menu";
+import { navMenu } from "@/lib/menu";
+import { Logo } from "./Logo";
 
-export default function MobileNav() {
+export function MobileNav() {
   const pathname = usePathname();
   const [activeClick, setActiveClick] = useState<string | null>(null);
   const [activeClickChild, setActiveClickChild] = useState<string | null>(null);
@@ -46,15 +45,16 @@ export default function MobileNav() {
             <Menu size={30} />
           </div>
         </SheetTrigger>
-        <SheetContent className="bg-primary/25 border-none">
+        <SheetContent className="bg-primary-foreground border-none">
           <SheetHeader className="text-left relative">
-            <SheetTitle>
+            <SheetTitle className="flex items-center justify-between gap-2">
               <Logo />
+              <ModeToggle />
             </SheetTitle>
             <SheetDescription className="hidden">Nav Description</SheetDescription>
           </SheetHeader>
           <div className="flex flex-col text-sm text-white mt-6">
-            {navbarMenu.map((item, i) => (
+            {navMenu.map((item, i) => (
               <div key={i}>
                 <div
                   className={`flex justify-between gap-1 text-sm border-b ${
@@ -108,17 +108,6 @@ export default function MobileNav() {
                 )}
               </div>
             ))}
-          </div>
-          <div className="absolute right-0 p-4 bottom-0 flex justify-between w-full gap-2">
-            <SheetClose asChild>
-              <Button asChild className={`bg-primary gap-2`}>
-                <Link href="/#contact-us" title="Contact Us" className="flex items-center gap-2">
-                  <FaWhatsapp size={22} />
-                  Contact Us
-                </Link>
-              </Button>
-            </SheetClose>
-            <ModeToggle />
           </div>
         </SheetContent>
       </Sheet>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function HomeHeroFlipText() {
+export function HeroFlipText() {
   const [arr] = useState(["Building", "Cleaning", "Power Service", "FTTH Material", "Uniform", "Event Organizer"]);
   const [arrId, setArrId] = useState(0);
 

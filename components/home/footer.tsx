@@ -1,65 +1,6 @@
-import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa6";
-import { Logo } from "./header";
 import Link from "next/link";
-
-const contactUsMenu = [
-  {
-    icon: null,
-    href: "https://maps.app.goo.gl/2pxVdjk4N2VjyqTC9",
-    label: "Komp. LPTI Jl. Paneli No.13A RT03/08 Kel Ciparigi Kecamatan Bogor Utara",
-    title: "Our Location",
-  },
-  {
-    icon: FaEnvelope,
-    href: "mailto:office.saikindosg@gmail.com",
-    label: "office.saikindosg@gmail.com",
-    title: "Email Us",
-  },
-  { icon: FaWhatsapp, href: "https://wa.me/628111775774", label: "62-8111-7757-74", title: "Whatsapp Us" },
-];
-
-const followUsMenu = [
-  { icon: FaLinkedin, href: "", label: "", title: "Youtube Account" },
-  { icon: FaYoutube, href: "", label: "", title: "Youtube Account" },
-  { icon: FaInstagram, href: "", label: "", title: "Instagram Account" },
-  { icon: FaTwitter, href: "", label: "", title: "Twitter Account" },
-  { icon: FaFacebook, href: "", label: "", title: "Facebook Account" },
-];
-
-const linksMenu = [
-  {
-    title: "Uniform",
-    menus: [
-      { href: "/products-services/uniform", label: "Portfolio" },
-      { href: "/products-services/uniform", label: "Our Client" },
-      { href: "/products-services/uniform", label: "Info Lainnya" },
-    ],
-  },
-  {
-    title: "Power",
-    menus: [
-      { href: "/products-services/power", label: "Maintenence" },
-      { href: "/products-services/power", label: "General Supply" },
-      { href: "/products-services/power", label: "Fiber Optic and Telecommunication" },
-    ],
-  },
-  {
-    title: "Event Organizer",
-    menus: [
-      { href: "/products-services/event-organizer", label: "Booth Production" },
-      { href: "/products-services/event-organizer", label: "Backdrop" },
-      { href: "/products-services/event-organizer", label: "Outbond" },
-      { href: "/products-services/event-organizer", label: "Gathering" },
-    ],
-  },
-  // {
-  //   title: "Health",
-  //   menus: [
-  //     { href: "/products-services/health", label: "Equipment" },
-  //     { href: "/products-services/health", label: "Supply" },
-  //   ],
-  // },
-];
+import { Logo } from "./Logo";
+import { contactUsMenu, followUsMenu, linksMenu } from "@/lib/menu";
 
 export function Footer() {
   return (
@@ -107,7 +48,11 @@ export function Footer() {
         <div className="container mx-auto py-6 flex flex-col sm:flex-row gap-4 justify-between items-center">
           <small className="min-w-max font-ptsans">
             Copyright &copy; {new Date().getFullYear()}{" "}
-            <a title="homepage saikindosg" href="/" className="font-semibold text-primary hover:underline">
+            <a
+              title="homepage saikindosg"
+              href="https://saikindo.co.id"
+              className="font-semibold text-primary hover:underline"
+            >
               PT Saikindo Surya Gumiwang
             </a>
           </small>

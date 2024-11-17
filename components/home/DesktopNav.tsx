@@ -1,13 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { ContactSales } from "./header";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ModeToggle } from "../theme/mode-toggle";
-import { navbarMenu } from "@/lib/navbar-menu";
 import { ChevronDown } from "lucide-react";
+import { navMenu } from "@/lib/menu";
 
 export function DesktopNav() {
   const [activeHover, setActiveHover] = useState<string | null>(null);
@@ -29,7 +28,7 @@ export function DesktopNav() {
     <nav className={`hidden md:block`}>
       <div className="flex flex-col md:flex-row gap-0 items-center">
         <div className="flex text-sm mr-4">
-          {navbarMenu.map((item, i) => (
+          {navMenu.map((item, i) => (
             <div
               onMouseEnter={() => setActiveHover(item.label)}
               onMouseLeave={() => setActiveHover(null)}
@@ -37,7 +36,11 @@ export function DesktopNav() {
               className="relative"
             >
               {activeClick === item.href.split("/")[1] && (
-                <motion.div layoutId="activeClick" className="h-0.5 w-full bottom-0.5 absolute bg-primary" />
+                <motion.div
+                  transition={{ duration: 0.2 }}
+                  layoutId="activeClick"
+                  className="h-0.5 w-full bottom-0.5 absolute bg-primary"
+                />
               )}
               <AnimatePresence>
                 {activeHover === item.label && (
@@ -64,7 +67,7 @@ export function DesktopNav() {
                     <div className="group-hover:rotate-180 transition">
                       <ChevronDown className="size-4" />
                     </div>
-                    <div className="p-2 absolute top-full w-max left-0 translate-y-5 group-hover:-translate-y-0.5 opacity-0 group-hover:opacity-100 bg-background border rounded-md transition">
+                    <div className="p-2 absolute top-full left-0 right-0 translate-y-5 group-hover:-translate-y-0.5 opacity-0 group-hover:opacity-100 bg-background border rounded-md transition">
                       <div className="flex flex-col">
                         {item?.subMenu?.map((itm, idx) => (
                           <div
@@ -104,10 +107,6 @@ export function DesktopNav() {
               </div>
             </div>
           ))}
-        </div>
-        <div className="flex gap-2">
-          <ContactSales className="flex self-start ml-4" />
-          <ModeToggle />
         </div>
       </div>
     </nav>

@@ -1,17 +1,17 @@
-import { HomeHero } from "./(components)/home-hero";
-import { HomeAbout } from "./(components)/home-about";
-import HomeProductService from "./(components)/home-product-service";
-import { HomeClient } from "./(components)/home-client";
-import HomeContact from "./(components)/home-contact";
+import { Hero } from "./(components)/Hero";
+import { About } from "./(components)/About";
+import { ProductService } from "./(components)/ProductService";
+import { Client } from "./(components)/Client";
+import { Contact } from "./(components)/Contact";
 
 export default function HomePage() {
   return (
     <div>
-      <HomeHero />
-      <HomeAbout />
-      <HomeProductService />
-      <HomeClient />
-      <HomeContact />
+      <Hero />
+      <About />
+      <ProductService />
+      <Client />
+      <Contact />
     </div>
   );
 }

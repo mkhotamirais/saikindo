@@ -6,10 +6,10 @@ import Link from "next/link";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { FaArrowRightLong, FaPlay } from "react-icons/fa6";
-import { productServiceList } from "@/lib/product-service-list";
+import { FaPlay } from "react-icons/fa6";
+import { productServiceList } from "@/lib/menu";
 
-export default function HomeProductService() {
+export function ProductService() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
 
@@ -58,21 +58,22 @@ export default function HomeProductService() {
                 alt="image saiki"
                 priority
               />
-              <div className="transition p-4">
-                <h3 className="font-josefin font-semibold text-2xl text-center text-primary">{item.title}</h3>
-              </div>
-              <p className="text-center">{item.description}</p>
-              <div className="flex gap-3 mt-3 flex-col justify-center items-center">
-                <Button variant={"link"} asChild>
-                  <Link href={item.href} className="group text-primary flex items-center max-w-fit mt-auto">
-                    <div className="group-hover:underline">View More</div>
-                    <FaArrowRightLong className="ml-2 group-hover:translate-x-2 transition" />
-                  </Link>
-                </Button>
-                <Button size="sm" className="flex gap-2 bg-primary">
-                  <FaPlay />
-                  Watch Video
-                </Button>
+              <div className="space-y-4 mt-8">
+                <div className="transition">
+                  <h3 className="font-josefin font-semibold text-2xl text-center text-primary">{item.title}</h3>
+                </div>
+                <p className="text-center">{item.description}</p>
+                <div className="flex gap-4 flex-col justify-center items-center">
+                  <Button asChild className="w-32">
+                    <Link href={item.href} className="font-semibold">
+                      Visit
+                    </Link>
+                  </Button>
+                  <Button variant={"link"} size="sm" className="w-32">
+                    <FaPlay className="size-4 mr-2" />
+                    Watch Video
+                  </Button>
+                </div>
               </div>
             </motion.div>
           ))}

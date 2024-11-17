@@ -4,19 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { H2 } from "@/components/wrapper";
+import { contactMenu } from "@/lib/menu";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
 import { FaWhatsapp, FaPaperPlane } from "react-icons/fa6";
 
-const contactList = [
-  { title: "Uniform", href: "https://wa.me/628111775774", label: "628111775774" },
-  { title: "Power", href: "", label: "08123456789" },
-  { title: "Event Organizer", href: "", label: "08123456789" },
-  { title: "Health", href: "", label: "08123456789" },
-];
-
-export default function HomeContact() {
+export function Contact() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
 
@@ -55,7 +49,7 @@ export default function HomeContact() {
 
             <div className="flex-1 flex flex-col sm:flex-row gap-2">
               <div className="flex-1 border rounded-lg p-3 text-center bg-white/70">
-                {contactList.map((item, i) => (
+                {contactMenu.map((item, i) => (
                   <div key={i} className="mb-1">
                     <h3 className="font-josefin text-lg">{item.title}</h3>
                     <Button asChild variant={"link"} size={"sm"} className="px-0">

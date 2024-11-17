@@ -1,9 +1,9 @@
-import HomeProductService from "../(root)/(components)/home-product-service";
+import { ProductService } from "../(root)/(components)/ProductService";
 
 export default function ProductsServicesPage() {
   return (
     <>
-      <HomeProductService />
+      <ProductService />
     </>
   );
 }

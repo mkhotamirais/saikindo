@@ -18,7 +18,7 @@ const contentList = [
   "/images/uniform2.png",
 ];
 
-export default function SwiperPage() {
+export default function HeroImageSlider() {
   return (
     <Swiper
       autoplay={{ delay: 5000 }}

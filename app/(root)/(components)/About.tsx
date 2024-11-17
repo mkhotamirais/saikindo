@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
-export function HomeAbout() {
+export function About() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
 
@@ -22,7 +22,7 @@ export function HomeAbout() {
           </motion.div>
           <motion.div
             className="relative"
-            animate={{ y: isInView ? 0 : -100, opacity: isInView ? 1 : 0, transition: { duration: 0.5 } }}
+            animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0, transition: { duration: 0.5 } }}
           >
             <div className="relative block lg:hidden">
               <Image
@@ -45,15 +45,16 @@ export function HomeAbout() {
                 organizers.
               </p>
             </div>
-            <div className="flex gap-3 items-center mt-auto">
-              <Button className="flex gap-2 bg-primary">
-                <FaPlay />
-                Watch Video
+            <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+              <Button asChild className="w-32">
+                <Link href="/about" className="text-primary font-semibold items-center">
+                  View More
+                </Link>
               </Button>
-              <Button variant={"link"} asChild>
-                <Link href="/about" className="group text-primary flex items-center max-w-fit mt-auto">
-                  <div className="group-hover:underline">View More</div>
-                  <FaArrowRightLong className="ml-2 group-hover:translate-x-2 transition" />
+              <Button variant={"link"} className="flex w-32" asChild>
+                <Link href="https://www.youtube.com/watch?v=sXFCwKD4JM4&t=37s">
+                  <FaPlay className="size-4 mr-2" />
+                  Watch Video
                 </Link>
               </Button>
             </div>
