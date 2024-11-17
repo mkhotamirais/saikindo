@@ -4,8 +4,8 @@ import { ClientWrapper } from "@/components/wrapper";
 import BackToTop from "@/components/back-to-top";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { CustomAuthor } from "./types";
-import { Header } from "@/components/home/Header";
-import { Footer } from "@/components/home/Footer";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://saikindo.co.id"),

@@ -6,8 +6,8 @@ import { DesktopNav } from "./DesktopNav";
 import { useScrollDirection } from "@/hooks/use-scroll-direaction";
 import { useMaxScrollReached } from "@/hooks/use-max-scroll-reached";
 import { Logo } from "./Logo";
-import { ContactBtn } from "../ContactBtn";
-import { ModeToggle } from "../theme/mode-toggle";
+import { ContactBtn } from "./ContactBtn";
+import { ModeToggle } from "./theme/mode-toggle";
 
 export function Header() {
   const scrollDirection = useScrollDirection();

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ModeToggle } from "../theme/mode-toggle";
+import { ModeToggle } from "./theme/mode-toggle";
 import { ChevronDown } from "lucide-react";
 import { navMenu } from "@/lib/menu";
 

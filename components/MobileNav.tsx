@@ -15,7 +15,7 @@ import { Menu } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { ModeToggle } from "../theme/mode-toggle";
+import { ModeToggle } from "./theme/mode-toggle";
 import { navMenu } from "@/lib/menu";
 import { Logo } from "./Logo";
 
