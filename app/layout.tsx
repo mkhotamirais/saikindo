@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     "PT. Saikindo Surya Gumiwang offers professional services including custom uniform supply, power solutions, event organizing, and workplace health services in Bogor, Indonesia.",
   keywords: [
     "saikindo",
+    "uniform",
+    "event",
+    "power",
     "saikindo surya gumiwang",
     "uniform supplier Bogor",
     "custom uniforms",
